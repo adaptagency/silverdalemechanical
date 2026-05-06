@@ -181,6 +181,8 @@ addReveal('.booking-left',       'reveal-left');
 addReveal('.booking-right',      'reveal-right');
 addReveal('.contact-info-block', 'reveal-left');
 addReveal('.contact-map-block',  'reveal-right');
+addReveal('.review-card');
+addReveal('.reviews-rating-block');
 addReveal('.section-header');
 addReveal('.pq-content');
 
