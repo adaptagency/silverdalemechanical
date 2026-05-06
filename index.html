@@ -26,7 +26,10 @@
         <li><a href="#why-us">Why Us</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <a href="#booking" class="nav-cta">Book Free Quote</a>
+      <div class="nav-ctas">
+        <a href="#booking" class="nav-cta nav-cta--outline" data-tab="quote">Free Quote</a>
+        <a href="#booking" class="nav-cta" data-tab="service">Book a Service</a>
+      </div>
       <button class="hamburger" id="hamburger" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
@@ -36,7 +39,8 @@
       <a href="#vehicles"  class="mm-link">Vehicles</a>
       <a href="#why-us"    class="mm-link">Why Us</a>
       <a href="#contact"   class="mm-link">Contact</a>
-      <a href="#booking"   class="mm-cta">Book Free Quote</a>
+      <a href="#booking"   class="mm-cta" data-tab="quote">Free Quote</a>
+      <a href="#booking"   class="mm-cta mm-cta--outline" data-tab="service">Book a Service</a>
     </div>
   </nav>
 
@@ -53,11 +57,14 @@
       </h1>
       <p class="hero-sub">45+ years keeping trucks, motorhomes &amp; heavy machinery moving.<br>Mobile &amp; workshop servicing across Auckland.</p>
       <div class="hero-actions">
-        <a href="#booking" class="btn-primary">
+        <a href="#booking" class="btn-primary" data-tab="quote">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
           Book a Free Quote
         </a>
-        <a href="#services" class="btn-ghost">View Our Services</a>
+        <a href="#booking" class="btn-ghost" data-tab="service">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+          Book a Service
+        </a>
       </div>
       <div class="hero-stats">
         <div class="hstat"><span class="hstat-num">45+</span><span class="hstat-label">Years Experience</span></div>
@@ -471,7 +478,13 @@
               <span class="ws-num" data-target="24">0</span><span class="ws-unit">/7</span>
               <span class="ws-label">Mobile Service</span>
             </div>
-            <a href="#booking" class="btn-primary full-w">Book Your Free Quote</a>
+            <div class="wsp-cta-row">
+              <a href="#booking" class="btn-primary full-w" data-tab="quote">Book Your Free Quote</a>
+              <a href="#booking" class="btn-directions full-w" data-tab="service">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+                Book a Service
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -518,11 +531,35 @@
     <div class="booking-bg" style="background-image:url('images/hero-truck-highway.jpg')"></div>
     <div class="booking-overlay"></div>
     <div class="container">
+
+      <!-- Tab switcher -->
+      <div class="booking-tabs">
+        <button class="btab active" data-target="quote">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Free Quote
+        </button>
+        <button class="btab" data-target="service">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+          Book a Service
+        </button>
+      </div>
+
       <div class="booking-wrap">
         <div class="booking-left">
-          <div class="section-tag light">Free Quote</div>
-          <h2 class="section-title light">Book Your<br>Free Quote</h2>
-          <p class="booking-sub">No obligation. No hidden fees. Just honest advice from experienced mechanics who understand heavy vehicles.</p>
+
+          <!-- Left panel: Free Quote -->
+          <div class="bleft-panel" id="bleft-quote">
+            <div class="section-tag light">Free Quote</div>
+            <h2 class="section-title light">Book Your<br>Free Quote</h2>
+            <p class="booking-sub">No obligation. No hidden fees. Just honest advice from experienced mechanics who understand heavy vehicles.</p>
+          </div>
+
+          <!-- Left panel: Book a Service -->
+          <div class="bleft-panel hidden" id="bleft-service">
+            <div class="section-tag light">Book a Service</div>
+            <h2 class="section-title light">Schedule Your<br>Service</h2>
+            <p class="booking-sub">Already know what you need? Book your service directly and we will confirm your appointment within 1 business hour.</p>
+          </div>
           <div class="booking-contact-info">
             <div class="bci-item">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.79 12 19.79 19.79 0 01.72 3.38 2 2 0 012.7 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.64a16 16 0 006.29 6.29l1.42-1.42a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
@@ -546,32 +583,35 @@
               <div class="bp-logo">Caltex</div>
             </div>
           </div>
-        </div>
+        </div><!-- /.booking-left -->
+
         <div class="booking-right">
-          <form class="booking-form" id="bookingForm" novalidate>
+
+          <!-- ── FORM: Free Quote ── -->
+          <form class="booking-form" id="quoteForm" data-form="quote" novalidate>
             <div class="form-row">
               <div class="form-group">
-                <label for="fname">First Name *</label>
-                <input type="text" id="fname" name="fname" placeholder="John" required />
+                <label for="q-fname">First Name *</label>
+                <input type="text" id="q-fname" name="fname" placeholder="John" required />
               </div>
               <div class="form-group">
-                <label for="lname">Last Name *</label>
-                <input type="text" id="lname" name="lname" placeholder="Smith" required />
+                <label for="q-lname">Last Name *</label>
+                <input type="text" id="q-lname" name="lname" placeholder="Smith" required />
               </div>
             </div>
             <div class="form-row">
               <div class="form-group">
-                <label for="phone">Phone *</label>
-                <input type="tel" id="phone" name="phone" placeholder="021 123 4567" required />
+                <label for="q-phone">Phone *</label>
+                <input type="tel" id="q-phone" name="phone" placeholder="021 123 4567" required />
               </div>
               <div class="form-group">
-                <label for="email">Email *</label>
-                <input type="email" id="email" name="email" placeholder="john@example.com" required />
+                <label for="q-email">Email *</label>
+                <input type="email" id="q-email" name="email" placeholder="john@example.com" required />
               </div>
             </div>
             <div class="form-group">
-              <label for="vehicle">Vehicle Type *</label>
-              <select id="vehicle" name="vehicle" required>
+              <label for="q-vehicle">Vehicle Type *</label>
+              <select id="q-vehicle" name="vehicle" required>
                 <option value="" disabled selected>Select vehicle type</option>
                 <option>Heavy Truck / Semi</option>
                 <option>Motorhome / Coach</option>
@@ -582,8 +622,8 @@
               </select>
             </div>
             <div class="form-group">
-              <label for="service">Service Required *</label>
-              <select id="service" name="service" required>
+              <label for="q-service">Service Required *</label>
+              <select id="q-service" name="service" required>
                 <option value="" disabled selected>Select service type</option>
                 <option>Scheduled Servicing</option>
                 <option>Engine Rebuild / Major Repair</option>
@@ -599,12 +639,12 @@
             </div>
             <div class="form-row">
               <div class="form-group">
-                <label for="date">Preferred Date *</label>
-                <input type="date" id="date" name="date" required />
+                <label for="q-date">Preferred Date *</label>
+                <input type="date" id="q-date" name="date" required />
               </div>
               <div class="form-group">
-                <label for="time">Preferred Time *</label>
-                <select id="time" name="time" required>
+                <label for="q-time">Preferred Time *</label>
+                <select id="q-time" name="time" required>
                   <option value="" disabled selected>Select time</option>
                   <option>7:00 am – 9:00 am</option>
                   <option>9:00 am – 11:00 am</option>
@@ -616,15 +656,15 @@
               </div>
             </div>
             <div class="form-group">
-              <label for="message">Tell us more (optional)</label>
-              <textarea id="message" name="message" rows="3" placeholder="Describe the issue, vehicle make/model, registration number, or any other details..."></textarea>
+              <label for="q-message">Tell us more (optional)</label>
+              <textarea id="q-message" name="message" rows="3" placeholder="Describe the issue, vehicle make/model, registration number, or any other details..."></textarea>
             </div>
             <button type="submit" class="btn-primary full-w submit-btn">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
               Request Free Quote
             </button>
-            <p class="form-note">We will confirm your booking within 1 business hour</p>
-            <div class="form-success" id="formSuccess">
+            <p class="form-note">We will confirm your quote within 1 business hour</p>
+            <div class="form-success" id="quoteSuccess">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
               <div>
                 <strong>Thank you! We will be in touch shortly.</strong>
@@ -632,7 +672,110 @@
               </div>
             </div>
           </form>
-        </div>
+
+          <!-- ── FORM: Book a Service ── -->
+          <form class="booking-form hidden" id="serviceForm" data-form="service" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="s-fname">First Name *</label>
+                <input type="text" id="s-fname" name="fname" placeholder="John" required />
+              </div>
+              <div class="form-group">
+                <label for="s-lname">Last Name *</label>
+                <input type="text" id="s-lname" name="lname" placeholder="Smith" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="s-phone">Phone *</label>
+                <input type="tel" id="s-phone" name="phone" placeholder="021 123 4567" required />
+              </div>
+              <div class="form-group">
+                <label for="s-email">Email *</label>
+                <input type="email" id="s-email" name="email" placeholder="john@example.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="s-vehicle">Vehicle Type *</label>
+              <select id="s-vehicle" name="vehicle" required>
+                <option value="" disabled selected>Select vehicle type</option>
+                <option>Heavy Truck / Semi</option>
+                <option>Motorhome / Coach</option>
+                <option>Excavator / Plant Machinery</option>
+                <option>Diesel Vehicle</option>
+                <option>Fleet Vehicle</option>
+                <option>Other Heavy Vehicle</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="s-rego">Vehicle Registration *</label>
+              <input type="text" id="s-rego" name="rego" placeholder="ABC123" required />
+            </div>
+            <div class="form-group">
+              <label for="s-service">Service Required *</label>
+              <select id="s-service" name="service" required>
+                <option value="" disabled selected>Select service type</option>
+                <option>Scheduled Servicing (Oil &amp; Filter)</option>
+                <option>Engine Rebuild / Major Repair</option>
+                <option>COF / WOF Pre-Check</option>
+                <option>Brake Service</option>
+                <option>Mobile On-Site Service</option>
+                <option>Welding / Fabrication</option>
+                <option>Hydraulic Service</option>
+                <option>Pre-Purchase Inspection</option>
+                <option>Emergency Repair</option>
+                <option>Top Tune</option>
+                <option>Clutch Service</option>
+                <option>Belt Replacement</option>
+                <option>Track Adjustment</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="s-location">Service Location *</label>
+              <select id="s-location" name="location" required>
+                <option value="" disabled selected>Select location</option>
+                <option>Workshop — Silverdale</option>
+                <option>Mobile — Come to me</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="s-date">Preferred Date *</label>
+                <input type="date" id="s-date" name="date" required />
+              </div>
+              <div class="form-group">
+                <label for="s-time">Preferred Time *</label>
+                <select id="s-time" name="time" required>
+                  <option value="" disabled selected>Select time</option>
+                  <option>7:00 am – 9:00 am</option>
+                  <option>9:00 am – 11:00 am</option>
+                  <option>11:00 am – 1:00 pm</option>
+                  <option>1:00 pm – 3:00 pm</option>
+                  <option>3:00 pm – 5:00 pm</option>
+                  <option>Flexible / ASAP</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="s-notes">Additional Notes (optional)</label>
+              <textarea id="s-notes" name="notes" rows="3" placeholder="Any known issues, previous service history, or special requirements..."></textarea>
+            </div>
+            <button type="submit" class="btn-primary full-w submit-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+              Confirm Service Booking
+            </button>
+            <p class="form-note">We will confirm your appointment within 1 business hour</p>
+            <div class="form-success" id="serviceSuccess">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <div>
+                <strong>Booking confirmed! We will be in touch shortly.</strong>
+                <span>Your service booking request has been received.</span>
+              </div>
+            </div>
+          </form>
+
+        </div><!-- /.booking-right -->
       </div>
     </div>
   </section>

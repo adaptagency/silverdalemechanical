@@ -235,6 +235,15 @@ iframe { display: block; }
   flex-shrink: 0;
 }
 .nav-cta:hover { background: var(--red-dark); }
+.nav-cta--outline {
+  background: transparent;
+  border: 2px solid rgba(255,255,255,0.35);
+  color: var(--white);
+}
+.nav-cta--outline:hover { background: rgba(255,255,255,0.08); border-color: var(--white); }
+
+/* Nav CTA pair */
+.nav-ctas { display: flex; gap: 0.6rem; align-items: center; flex-shrink: 0; }
 
 /* hamburger */
 .hamburger {
@@ -941,6 +950,63 @@ cite {
   border-radius: 3px;
 }
 
+/* Booking tabs */
+.booking-tabs {
+  display: flex;
+  gap: 0;
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 2;
+  background: rgba(0,0,0,0.45);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 4px;
+  padding: 5px;
+  width: fit-content;
+}
+.btab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.75rem 1.8rem;
+  background: transparent;
+  border: none;
+  border-radius: 3px;
+  color: rgba(255,255,255,0.5);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.88rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.22s, color 0.22s;
+  white-space: nowrap;
+}
+.btab svg { width: 15px; height: 15px; stroke: currentColor; flex-shrink: 0; }
+.btab:hover { color: rgba(255,255,255,0.82); }
+.btab.active {
+  background: var(--red);
+  color: var(--white);
+}
+
+/* Left panel swap */
+.bleft-panel { transition: opacity 0.25s; }
+.bleft-panel.hidden { display: none; }
+
+/* hidden utility for form swap */
+.booking-form.hidden { display: none; }
+
+/* Why-Us CTA pair */
+.wsp-cta-row { display: flex; flex-direction: column; gap: 0.9rem; margin-top: 2rem; }
+
+/* Mobile menu second CTA */
+.mm-cta--outline {
+  background: transparent;
+  border: 2px solid rgba(255,255,255,0.3);
+  color: var(--white);
+  margin-top: 0;
+}
+.mm-cta--outline:hover { background: rgba(255,255,255,0.08); }
+
 /* Form */
 .booking-form {
   background: rgba(16,16,16,0.92);
@@ -1209,7 +1275,7 @@ cite {
 /* ── 900px ─────────────────────────────────────────────────── */
 @media (max-width: 900px) {
   /* nav */
-  .nav-links, .nav-cta { display: none; }
+  .nav-links, .nav-ctas { display: none; }
   .hamburger { display: flex; }
 
   /* hero */
