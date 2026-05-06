@@ -4,9 +4,9 @@ Premium single-page website for **Silverdale Mechanical Engineering Limited**, A
 
 ---
 
-## Live Preview
+## Live Site
 
-> Serve locally with any static file server — see [Running Locally](#running-locally) below.
+**GitHub Pages:** [https://adaptagency.github.io/silverdalemechanical](https://adaptagency.github.io/silverdalemechanical)
 
 ---
 
@@ -14,13 +14,34 @@ Premium single-page website for **Silverdale Mechanical Engineering Limited**, A
 
 ```
 silverdalemechanical/
-├── index.html        # Single-page application (766 lines)
-├── style.css         # Full stylesheet with responsive breakpoints (1,287 lines)
-├── main.js           # Vanilla JS — animations, counters, form, nav (265 lines)
-└── favicon.svg       # SVG favicon
+├── index.html          # Single-page application (919 lines)
+├── style.css           # Full stylesheet with responsive breakpoints (1,406 lines)
+├── main.js             # Vanilla JS — animations, counters, forms, nav (276 lines)
+├── favicon.svg         # SVG favicon
+└── images/             # 19 locally-hosted AI-generated images (4.3 MB total)
+    ├── hero-truck-highway.jpg
+    ├── workshop-interior.jpg
+    ├── bg-services-dark.jpg
+    ├── bg-parallax-quote.jpg
+    ├── service-diesel-servicing.jpg
+    ├── service-plant-machinery.jpg
+    ├── service-engineering-welding.jpg
+    ├── service-cof-wof-checks.jpg
+    ├── service-mobile-onsite.jpg
+    ├── service-motorhome.jpg
+    ├── service-hydraulic-systems.jpg
+    ├── service-engine-rebuilds.jpg
+    ├── service-prepurchase-inspection.jpg
+    ├── vehicle-heavy-trucks.jpg
+    ├── vehicle-motorhomes.jpg
+    ├── vehicle-excavators.jpg
+    ├── vehicle-diesel-vehicles.jpg
+    ├── vehicle-plant-equipment.jpg
+    └── vehicle-fleet-vehicles.jpg
 ```
 
 No build tools. No frameworks. No dependencies. Pure HTML, CSS and JavaScript.
+All images are stored locally in the repository — no external CDN dependencies.
 
 ---
 
@@ -33,7 +54,7 @@ No build tools. No frameworks. No dependencies. Pure HTML, CSS and JavaScript.
 | Background | Near-black `#0a0a0a` |
 | Accent | Silver / light grey |
 | Fonts | Bebas Neue · Barlow Condensed · Inter (Google Fonts) |
-| Images | AI-generated via `fal-ai/flux-2-pro` |
+| Images | AI-generated via `fal-ai/flux-2-pro`, hosted locally in `/images` |
 | Language | British English (`lang="en-GB"`) |
 
 ### Design Principles
@@ -56,8 +77,8 @@ No build tools. No frameworks. No dependencies. Pure HTML, CSS and JavaScript.
 | 7 | Parallax quote (Henry Ford) | — |
 | 8 | Why Choose Us with animated stat counters | `#why-us` |
 | 9 | 4-step How It Works process | — |
-| 10 | Booking form (date / time picker) | `#booking` |
-| 11 | Contact info + Google Maps embed | `#contact` |
+| 10 | Two-tab booking section (Free Quote / Book a Service) | `#booking` |
+| 11 | Contact info + Get Directions + Google Maps embed | `#contact` |
 | 12 | 4-column footer | — |
 
 ---
@@ -82,22 +103,41 @@ Heavy Trucks · Motorhomes · Excavators · Diesel Vehicles · Plant & Equipment
 
 ## Features
 
+### Navigation
+- Two CTAs in the navbar: **Free Quote** (outline) and **Book a Service** (filled red)
+- Both link to `#booking` and auto-activate the corresponding form tab via `data-tab` attribute
+- Hamburger mobile menu mirrors both CTAs
+- Smooth-scroll with navbar-height offset
+
+### Booking Section (Two Tabs)
+
+The booking section hosts two separate forms behind a tab switcher:
+
+| Tab | Audience | Extra Fields | Submit Label |
+|---|---|---|---|
+| **Free Quote** | New customers | — | Request Free Quote |
+| **Book a Service** | Returning customers | Registration number, Workshop or Mobile preference | Confirm Service Booking |
+
+**Shared fields:** First name, last name, phone, email, vehicle type, service required, preferred date (native `<input type="date">`), preferred time slot, optional message.
+
+Date input uses the browser's native date picker — no third-party calendar library is used.
+
+- Client-side validation with inline error states and shake animation
+- Success confirmation message on submit (auto-hides after 8 seconds)
+- Currently front-end only — wire to a backend or service (e.g. Formspree, EmailJS, AutoHive API) as needed
+- Deep-linking: any `<a href="#booking" data-tab="quote|service">` anywhere on the page scrolls to the section and activates the correct tab
+
+### Contact Section
+- Phone, email, address, business hours
+- **Get Directions** — inline link beneath address + standalone button, both opening Google Maps directions to Silverdale Mechanical Engineering in a new tab
+- Embedded Google Maps iframe (Silverdale, Auckland)
+
 ### Interactivity
 - Scroll-triggered reveal animations (Intersection Observer)
 - Animated stat counters (counts up on scroll into view)
-- Card tilt effect on hover (mouse-tracking)
-- Parallax background scrolling
-- Sticky navbar with scroll-state glass effect
-- Hamburger mobile menu with smooth open/close
-
-### Booking Form
-- Fields: First name, last name, phone, email, vehicle type, service type, preferred date, preferred time, message
-- Client-side validation with inline error states
-- Success confirmation message on submit
-- Currently front-end only — wire to a backend or service (e.g. Formspree, EmailJS, AutoHive API) as needed
-
-### Google Maps
-Embedded iframe pinned to Silverdale Mechanical Engineering, Silverdale, Auckland.
+- Card tilt effect on hover (mouse-tracking, disabled on touch devices)
+- Parallax background scrolling (desktop only, ≥ 900px)
+- Sticky navbar with scroll-state frosted-glass effect
 
 ---
 
@@ -108,7 +148,7 @@ Embedded iframe pinned to Silverdale Mechanical Engineering, Silverdale, Aucklan
 | ≤ 1100px | Services 2-column · footer 2-column |
 | ≤ 900px | Nav collapses to hamburger · sections stack · parallax disabled |
 | ≤ 700px | Services & vehicles 1-column · form rows stack · hero buttons stack |
-| ≤ 480px | Compact typography · shorter images · tighter spacing |
+| ≤ 480px | Compact typography · shorter images · tighter spacing · CTA buttons full-width |
 | ≤ 360px | Minimum viable layout |
 
 ---
@@ -147,18 +187,17 @@ npx http-server -p 3000
 
 ## Planned / Future Work
 
-- [ ] **Bilingual te reo Māori toggle** — EN / MI language switcher in the navbar using `data-en` / `data-mi` attributes (requires professional translation review)
-- [ ] **Form backend** — connect booking form to EmailJS, Formspree or AutoHive API
-- [ ] **Deployment** — publish to Cloudflare Pages or Netlify for production hosting
+- [ ] **Bilingual te reo Māori toggle** — EN / MI language switcher in the navbar using `data-en` / `data-mi` attributes (requires professional translation review before implementation)
+- [ ] **Form backend** — connect booking forms to EmailJS, Formspree or AutoHive API to deliver submissions to the workshop inbox
 - [ ] **Analytics** — add privacy-friendly analytics (e.g. Plausible, Fathom)
 
 ---
 
 ## Contact
 
-**Silverdale Mechanical Engineering Limited**
-Silverdale, Auckland, New Zealand
-📞 (09) 426 4181
+**Silverdale Mechanical Engineering Limited**  
+Silverdale, Auckland, New Zealand  
+📞 (09) 426 4181  
 ✉️ info@silverdalemechanical.com
 
 ---
