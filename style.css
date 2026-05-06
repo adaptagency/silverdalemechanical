@@ -1038,7 +1038,59 @@ cite {
 }
 .ci-item a:hover { color: var(--red); }
 
-.contact-cta-btn { margin-top: 2.5rem; }
+/* Directions link inside location ci-item */
+.directions-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.55rem;
+  font-size: 0.85rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--red);
+  text-decoration: none;
+  transition: color 0.2s, gap 0.2s;
+}
+.directions-link svg { width: 13px; height: 13px; stroke: var(--red); transition: transform 0.2s; }
+.directions-link:hover { color: #ff4a42; gap: 0.6rem; }
+.directions-link:hover svg { transform: translateX(3px); }
+
+/* Contact CTA row — Book + Directions buttons side by side */
+.contact-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2.5rem;
+  align-items: center;
+}
+.contact-cta-btn { margin-top: 0; }
+.btn-directions {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.85rem 1.8rem;
+  background: transparent;
+  border: 2px solid var(--red);
+  color: var(--white);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 3px;
+  transition: background 0.25s, color 0.25s, gap 0.2s;
+  white-space: nowrap;
+}
+.btn-directions svg { width: 15px; height: 15px; stroke: currentColor; transition: transform 0.2s; }
+.btn-directions:hover {
+  background: var(--red);
+  color: var(--white);
+  gap: 0.75rem;
+}
+.btn-directions:hover svg { transform: translateX(3px); }
 
 /* Google Map frame */
 .contact-map-block { position: relative; }
@@ -1259,7 +1311,8 @@ cite {
 
   /* contact */
   .map-frame-wrap { height: 260px; }
-  .contact-cta-btn { width: 100%; }
+  .contact-cta-row { flex-direction: column; align-items: stretch; }
+  .contact-cta-btn, .btn-directions { width: 100%; justify-content: center; }
 
   /* wsp-inner stats grid */
   .wsp-inner { grid-template-columns: 1fr 1fr; }
