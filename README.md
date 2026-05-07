@@ -208,7 +208,7 @@ npx http-server -p 3000
 **Silverdale Mechanical Engineering Limited**
 Silverdale, Auckland, New Zealand
 📞 (09) 426 4181
-✉️ info@silverdalemechanical.com
+✉️ admin@silverdalemechanical.com
 
 ---
 
