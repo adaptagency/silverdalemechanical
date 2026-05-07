@@ -129,4 +129,4 @@ The website is live and functional. The documentation has been updated to reflec
 
 ---
 
-*This brief is prepared for internal and stakeholder review. All information reflects the current state of the live website and the workshop's stated service range as of June 2025.*
+*This brief is prepared for internal and stakeholder review. All information reflects the current state of the live website and the workshop's stated service range as of May 2026.*
