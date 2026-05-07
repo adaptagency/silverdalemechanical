@@ -12,7 +12,7 @@
 **Client:** Silverdale Mechanical Engineering Limited  
 **Location:** Silverdale, Auckland, New Zealand  
 **Phone:** (09) 426 4181  
-**Email:** info@silverdalemechanical.com  
+**Email:** admin@silverdalemechanical.com  
 **Workshop management:** [AutoHive](https://autohive.co.nz/)
 
 Silverdale Mechanical is a full-service mechanical workshop serving both **general automotive customers and heavy/commercial vehicle customers**. Services cover petrol and diesel vehicles, all makes, ranging from passenger cars and SUVs through to heavy trucks, plant machinery, and fleet operations.
