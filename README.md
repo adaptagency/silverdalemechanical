@@ -1,6 +1,6 @@
 # Silverdale Mechanical Engineering — Website
 
-Premium single-page website for **Silverdale Mechanical Engineering Limited**, Auckland's heavy vehicle mechanical specialists. Built to replace the legacy site at [silverdalemechanical.com](https://silverdalemechanical.com).
+Premium single-page website for **Silverdale Mechanical Engineering Limited**, Auckland's trusted mechanics for cars, trucks, motorhomes, and heavy machinery. Built to replace the legacy site at [silverdalemechanical.com](https://silverdalemechanical.com).
 
 ---
 
@@ -14,11 +14,13 @@ Premium single-page website for **Silverdale Mechanical Engineering Limited**, A
 
 ```
 silverdalemechanical/
-├── index.html          # Single-page application (919 lines)
-├── style.css           # Full stylesheet with responsive breakpoints (1,406 lines)
-├── main.js             # Vanilla JS — animations, counters, forms, nav (276 lines)
+├── index.html          # Single-page application
+├── style.css           # Full stylesheet with responsive breakpoints
+├── main.js             # Vanilla JS — animations, counters, forms, nav
 ├── favicon.svg         # SVG favicon
-└── images/             # 19 locally-hosted AI-generated images (4.3 MB total)
+├── privacy-policy.html # Privacy policy page
+├── terms-of-use.html   # Terms of use page
+└── images/             # 21 locally-hosted AI-generated images (~5 MB total)
     ├── hero-truck-highway.jpg
     ├── workshop-interior.jpg
     ├── bg-services-dark.jpg
@@ -37,7 +39,8 @@ silverdalemechanical/
     ├── vehicle-excavators.jpg
     ├── vehicle-diesel-vehicles.jpg
     ├── vehicle-plant-equipment.jpg
-    └── vehicle-fleet-vehicles.jpg
+    ├── vehicle-fleet-vehicles.jpg
+    └── vehicle-cars-suv.jpg
 ```
 
 No build tools. No frameworks. No dependencies. Pure HTML, CSS and JavaScript.
@@ -45,19 +48,26 @@ All images are stored locally in the repository — no external CDN dependencies
 
 ---
 
+## About the Business
+
+Silverdale Mechanical Engineering Limited is a full-service mechanical workshop based in Silverdale, Auckland. The business services a wide range of vehicles including **cars and SUVs** alongside heavy commercial vehicles — covering petrol and diesel, all makes. Services span general mechanical repairs, diesel servicing, engine rebuilds, hydraulic systems, mobile on-site service, and COF/WOF compliance checks.
+
+---
+
 ## Design
 
-| Property | Value |
-|---|---|
-| Theme | Dark premium industrial |
-| Primary colour | Crimson `#E8231A` |
-| Background | Near-black `#0a0a0a` |
-| Accent | Silver / light grey |
-| Fonts | Bebas Neue · Barlow Condensed · Inter (Google Fonts) |
-| Images | AI-generated via `fal-ai/flux-2-pro`, hosted locally in `/images` |
-| Language | British English (`lang="en-GB"`) |
+| Property             | Value                                                                 |
+|---------------------|------------------------------------------------------------------------|
+| Theme               | Dark premium industrial                                               |
+| Primary colour      | Crimson `#E8231A`                                                     |
+| Background          | Near-black `#0a0a0a`                                                  |
+| Accent              | Silver / light grey                                                   |
+| Fonts               | Bebas Neue · Barlow Condensed · Inter (Google Fonts)                  |
+| Images              | AI-generated via `fal-ai/flux-2-pro`, hosted locally in `/images`     |
+| Language            | British English (`lang=en-GB`)                                        |
 
 ### Design Principles
+
 - **No horizontal dividers** — free-flowing, full-bleed section transitions
 - Full-screen background images throughout
 - Cinematic, editorial feel appropriate to a premium trade brand
@@ -66,25 +76,26 @@ All images are stored locally in the repository — no external CDN dependencies
 
 ## Sections
 
-| # | Section | ID |
-|---|---|---|
-| 1 | Fixed navbar (frosted glass, hamburger on mobile) | `#navbar` |
-| 2 | Full-screen hero with Ken Burns zoom | `#hero` |
-| 3 | Scrolling service marquee strip | — |
-| 4 | About / intro split | `#about` |
-| 5 | 9-card services grid | `#services` |
-| 6 | 6-tile vehicle types grid | `#vehicles` |
-| 7 | Parallax quote (Henry Ford) | — |
-| 8 | Why Choose Us with animated stat counters | `#why-us` |
-| 9 | 4-step How It Works process | — |
-| 10 | Two-tab booking section (Free Quote / Book a Service) | `#booking` |
-| 11 | Contact info + Get Directions + Google Maps embed | `#contact` |
-| 12 | 4-column footer | — |
+| #  | Section                                                      | ID         |
+|----|--------------------------------------------------------------|------------|
+| 1  | Fixed navbar (frosted glass, hamburger on mobile)            | `#navbar`  |
+| 2  | Full-screen hero with Ken Burns zoom                         | `#hero`    |
+| 3  | Scrolling service marquee strip                              | —          |
+| 4  | About / intro split                                          | `#about`   |
+| 5  | 9-card services grid                                         | `#services`|
+| 6  | 7-tile vehicle types grid                                    | `#vehicles`|
+| 7  | Parallax quote (Henry Ford)                                  | —          |
+| 8  | Why Choose Us with animated stat counters                    | `#why-us`  |
+| 9  | 4-step How It Works process                                  | —          |
+| 10 | Two-tab booking section (Free Quote / Book a Service)        | `#booking` |
+| 11 | Contact info + Get Directions + Google Maps embed            | `#contact` |
+| 12 | 4-column footer                                              | —          |
 
 ---
 
 ## Services Covered
 
+- **Car & SUV Servicing** (petrol & diesel, all makes)
 - Diesel Servicing (oil & filter, top tunes, clutch, belts)
 - Plant & Machinery (excavators, bulldozers, on-site)
 - Engineering & Welding (MIG, TIG, arc, fabrication)
@@ -97,7 +108,7 @@ All images are stored locally in the repository — no external CDN dependencies
 
 ## Vehicle Types
 
-Heavy Trucks · Motorhomes · Excavators · Diesel Vehicles · Plant & Equipment · Fleet Vehicles
+Cars & SUVs · Heavy Trucks · Motorhomes · Excavators · Diesel Vehicles · Plant & Equipment · Fleet Vehicles
 
 ---
 
@@ -113,19 +124,19 @@ Heavy Trucks · Motorhomes · Excavators · Diesel Vehicles · Plant & Equipment
 
 The booking section hosts two separate forms behind a tab switcher:
 
-| Tab | Audience | Extra Fields | Submit Label |
-|---|---|---|---|
-| **Free Quote** | New customers | — | Request Free Quote |
-| **Book a Service** | Returning customers | Registration number, Workshop or Mobile preference | Confirm Service Booking |
+| Tab                 | Audience             | Extra Fields                                   | Submit Label            |
+|---------------------|----------------------|------------------------------------------------|------------------------|
+| **Free Quote**      | New customers        | —                                              | Request Free Quote     |
+| **Book a Service**  | Returning customers  | Registration number, Workshop or Mobile preference | Confirm Service Booking |
 
-**Shared fields:** First name, last name, phone, email, vehicle type, service required, preferred date (native `<input type="date">`), preferred time slot, optional message.
+**Shared fields:** First name, last name, phone, email, vehicle type, service required, preferred date (native `<input type=date>`), preferred time slot, optional message.
 
 Date input uses the browser's native date picker — no third-party calendar library is used.
 
 - Client-side validation with inline error states and shake animation
 - Success confirmation message on submit (auto-hides after 8 seconds)
 - Currently front-end only — wire to a backend or service (e.g. Formspree, EmailJS, AutoHive API) as needed
-- Deep-linking: any `<a href="#booking" data-tab="quote|service">` anywhere on the page scrolls to the section and activates the correct tab
+- Deep-linking: any `<a href=#booking data-tab=quote|service>` anywhere on the page scrolls to the section and activates the correct tab
 
 ### Contact Section
 - Phone, email, address, business hours
@@ -143,24 +154,24 @@ Date input uses the browser's native date picker — no third-party calendar lib
 
 ## Responsive Breakpoints
 
-| Breakpoint | Layout change |
-|---|---|
-| ≤ 1100px | Services 2-column · footer 2-column |
-| ≤ 900px | Nav collapses to hamburger · sections stack · parallax disabled |
-| ≤ 700px | Services & vehicles 1-column · form rows stack · hero buttons stack |
-| ≤ 480px | Compact typography · shorter images · tighter spacing · CTA buttons full-width |
-| ≤ 360px | Minimum viable layout |
+| Breakpoint | Layout change                                                        |
+|------------|---------------------------------------------------------------------|
+| ≤ 1100 px  | Services 2-column · footer 2-column                                 |
+| ≤ 900 px   | Nav collapses to hamburger · sections stack · parallax disabled      |
+| ≤ 700 px   | Services & vehicles 1-column · form rows stack · hero buttons stack |
+| ≤ 480 px   | Compact typography · shorter images · tighter spacing · CTA buttons full-width |
+| ≤ 360 px   | Minimum viable layout                                               |
 
 ---
 
 ## Authorised Partners
 
-| Partner | Role |
-|---|---|
-| **MTA Assured** | Motor Trade Association membership |
-| **Kobelco** | Authorised service agent |
-| **Attach2** | Authorised agent |
-| **Caltex** | Preferred oils & lubricants |
+| Partner     | Role                                  |
+|-------------|---------------------------------------|
+| MTA Assured | Motor Trade Association membership    |
+| Kobelco     | Authorised service agent              |
+| Attach2     | Authorised agent                      |
+| Caltex      | Preferred oils & lubricants           |
 
 Workshop management powered by **[AutoHive](https://autohive.co.nz/)**.
 
@@ -195,9 +206,9 @@ npx http-server -p 3000
 
 ## Contact
 
-**Silverdale Mechanical Engineering Limited**  
-Silverdale, Auckland, New Zealand  
-📞 (09) 426 4181  
+**Silverdale Mechanical Engineering Limited**
+Silverdale, Auckland, New Zealand
+📞 (09) 426 4181
 ✉️ info@silverdalemechanical.com
 
 ---
