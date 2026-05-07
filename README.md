@@ -198,8 +198,7 @@ npx http-server -p 3000
 
 ## Planned / Future Work
 
-- [ ] **Bilingual te reo Māori toggle** — EN / MI language switcher in the navbar using `data-en` / `data-mi` attributes (requires professional translation review before implementation)
-- [ ] **Form backend** — connect booking forms to EmailJS, Formspree or AutoHive API to deliver submissions to the workshop inbox
+- [ ] **Form backend (EmailJS)** — connect booking forms to EmailJS to deliver quote and service submissions directly to the workshop inbox. Two forms (Free Quote and Book a Service) need separate email templates configured.
 - [ ] **Analytics** — add privacy-friendly analytics (e.g. Plausible, Fathom)
 
 ---
