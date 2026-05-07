@@ -196,8 +196,7 @@ Workshop management powered by **[AutoHive](https://autohive.co.nz/)**.
 
 ## 12. Planned Future Work
 
-- [ ] **Bilingual te reo Māori toggle** — EN / MI language switcher in the navbar using `data-en` / `data-mi` attributes (requires professional translation review before implementation)
-- [ ] **Form backend** — connect booking forms to EmailJS, Formspree or AutoHive API to deliver submissions to the workshop inbox
+- [ ] **Form backend (EmailJS)** — connect both booking forms (Free Quote and Book a Service) to EmailJS so submissions are delivered directly to the workshop inbox. Requires setting up two EmailJS templates aligned to each form's fields.
 - [ ] **Analytics** — add privacy-friendly analytics (e.g. Plausible, Fathom)
 
 ---
