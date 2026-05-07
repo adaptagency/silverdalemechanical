@@ -122,6 +122,8 @@ The website is live and functional. The documentation has been updated to reflec
 
 **Suggested next steps to discuss:**
 
+- **Overall website look and feel** — confirm style and layout overall, or suggest changes
+- **Content errors** — replace and incorrect, or improvable, text and imagery to meet fine business requirements.
 - **Booking form backend (EmailJS)** — connect both forms to EmailJS so quote requests and service bookings arrive directly in the workshop inbox. We handle the setup — templates, field mapping, and testing.
 - Add privacy-friendly analytics (e.g. Plausible or Fathom) to understand how visitors use the site without compromising their privacy
 
