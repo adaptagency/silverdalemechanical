@@ -4,7 +4,7 @@
 
 **Prepared for:** Silverdale Mechanical Engineering Limited  
 **Prepared by:** Adapt Agency  
-**Date:** June 2025  
+**Date:** May 2026  
 **Status:** Active — live website, next phase to be confirmed  
 **Live site:** [https://adaptagency.github.io/silverdalemechanical](https://adaptagency.github.io/silverdalemechanical)
 
