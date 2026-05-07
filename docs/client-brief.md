@@ -100,7 +100,7 @@ The site includes an active booking section with two separate forms:
 
 Both forms use a native browser date picker (no clunky pop-up calendars), include clear inline validation, and show a success confirmation on submission.
 
-> **Note on form submission:** The forms are currently set up to receive submissions on the front end. Connecting them to the workshop's inbox or workshop management system (AutoHive) is a planned next step.
+> **Note on form submission:** The forms are currently set up to receive submissions on the front end. EmailJS integration is the next step to deliver them to the workshop inbox.
 
 ---
 
@@ -122,8 +122,7 @@ The website is live and functional. The documentation has been updated to reflec
 
 **Suggested next steps to discuss:**
 
-- Connect the booking forms to the workshop inbox or AutoHive so submissions arrive where the team can act on them
-- Add a te reo Maori / English language toggle in the navigation (would need professional translation review)
+- **Booking form backend (EmailJS)** — connect both forms to EmailJS so quote requests and service bookings arrive directly in the workshop inbox. We handle the setup — templates, field mapping, and testing.
 - Add privacy-friendly analytics (e.g. Plausible or Fathom) to understand how visitors use the site without compromising their privacy
 
 ---
