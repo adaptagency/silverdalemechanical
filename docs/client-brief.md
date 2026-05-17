@@ -1,8 +1,8 @@
-# Project Brief — Silverdale Mechanical Engineering Limited
+# Project Brief — Silverdale Mechanical Engineering
 
 ---
 
-**Prepared for:** Silverdale Mechanical Engineering Limited  
+**Prepared for:** Silverdale Mechanical Engineering  
 **Prepared by:** Adapt Agency  
 **Date:** May 2026  
 **Status:** Active — live website, next phase to be confirmed  
@@ -12,7 +12,7 @@
 
 ## About the Business
 
-Silverdale Mechanical Engineering Limited is a full-service mechanical workshop based in Silverdale, Auckland. The business serves a broad range of customers — from everyday car and SUV owners to operators of heavy trucks, plant machinery, and commercial fleets. Services cover everything from routine servicing through to engine rebuilds, hydraulic systems, mobile on-site work, and compliance checks.
+Silverdale Mechanical Engineering is a full-service mechanical workshop based in Silverdale, Auckland. The business serves a broad range of customers — from everyday car and SUV owners to operators of heavy trucks, plant machinery, and commercial fleets. Services cover everything from routine servicing through to engine rebuilds, hydraulic systems, mobile on-site work, and compliance checks.
 
 The workshop is backed by authorised partnerships with MTA Assured, Kobelco, and Attach2, and is supported by Caltex oils and lubricants. Workshop management is powered by AutoHive.
 

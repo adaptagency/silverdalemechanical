@@ -9,7 +9,7 @@
 
 ## 1. Business Overview
 
-**Client:** Silverdale Mechanical Engineering Limited  
+**Client:** Silverdale Mechanical Engineering  
 **Location:** Silverdale, Auckland, New Zealand  
 **Phone:** (09) 426 4181  
 **Email:** admin@silverdalemechanical.com  
