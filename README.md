@@ -1,6 +1,6 @@
 # Silverdale Mechanical Engineering — Website
 
-Premium single-page website for **Silverdale Mechanical Engineering Limited**, Auckland's trusted mechanics for cars, trucks, motorhomes, and heavy machinery. Built to replace the legacy site at [silverdalemechanical.com](https://silverdalemechanical.com).
+Premium single-page website for **Silverdale Mechanical Engineering**, Auckland's trusted mechanics for cars, trucks, motorhomes, and heavy machinery. Built to replace the legacy site at [silverdalemechanical.com](https://silverdalemechanical.com).
 
 ---
 
@@ -50,7 +50,7 @@ All images are stored locally in the repository — no external CDN dependencies
 
 ## About the Business
 
-Silverdale Mechanical Engineering Limited is a full-service mechanical workshop based in Silverdale, Auckland. The business services a wide range of vehicles including **cars and SUVs** alongside heavy commercial vehicles — covering petrol and diesel, all makes. Services span general mechanical repairs, diesel servicing, engine rebuilds, hydraulic systems, mobile on-site service, and COF/WOF compliance checks.
+Silverdale Mechanical Engineering is a full-service mechanical workshop based in Silverdale, Auckland. The business services a wide range of vehicles including **cars and SUVs** alongside heavy commercial vehicles — covering petrol and diesel, all makes. Services span general mechanical repairs, diesel servicing, engine rebuilds, hydraulic systems, mobile on-site service, and COF/WOF compliance checks.
 
 ---
 
@@ -205,11 +205,11 @@ npx http-server -p 3000
 
 ## Contact
 
-**Silverdale Mechanical Engineering Limited**
+**Silverdale Mechanical Engineering**
 Silverdale, Auckland, New Zealand
 📞 (09) 426 4181
 ✉️ admin@silverdalemechanical.com
 
 ---
 
-© 2025 Silverdale Mechanical Engineering Limited. All rights reserved.
+© 2025 Silverdale Mechanical Engineering. All rights reserved.
