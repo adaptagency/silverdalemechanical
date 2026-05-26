@@ -169,6 +169,7 @@ const addReveal = (selector, cls = 'reveal') => {
 };
 
 addReveal('.service-card');
+addReveal('.vehicle-type-item');
 addReveal('.vehicle-tile');
 addReveal('.ps-step');
 addReveal('.wf-item');
