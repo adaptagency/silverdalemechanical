@@ -207,61 +207,6 @@ const counterObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.ws-num[data-target]').forEach(el => counterObserver.observe(el));
 
-/* ── SERVICE CARD TILT ──────────────────────────────────────── */
-document.querySelectorAll('[data-hover]').forEach(card => {
-  card.addEventListener('mousemove', e => {
-    const rect = card.getBoundingClientRect();
-    const x = (e.clientX - rect.left) / rect.width  - 0.5;
-    const y = (e.clientY - rect.top)  / rect.height - 0.5;
-    card.style.transform = `perspective(800px) rotateY(${x * 4}deg) rotateX(${-y * 4}deg) translateZ(4px)`;
-  });
-  card.addEventListener('mouseleave', () => {
-    card.style.transform = '';
-    card.style.transition = 'transform 0.5s ease';
-    setTimeout(() => card.style.transition = '', 500);
-  });
-});
-
-/* ── PARALLAX ───────────────────────────────────────────────── */
-if (window.innerWidth > 900) {
-  const parallaxEls = document.querySelectorAll('.hero-bg, .parallax-quote');
-  window.addEventListener('scroll', () => {
-    parallaxEls.forEach(el => {
-      const rect   = el.closest('section, .parallax-quote')?.getBoundingClientRect();
-      if (!rect) return;
-      if (rect.top > window.innerHeight || rect.bottom < 0) return;
-      const offset = (rect.top + rect.height / 2 - window.innerHeight / 2) * 0.15;
-      el.style.transform = `translateY(${offset}px)`;
-    });
-  }, { passive: true });
-}
-
-/* ── STAGGER SERVICE CARDS ──────────────────────────────────── */
-const cardGrid = document.querySelector('.services-grid');
-if (cardGrid) {
-  const gridObserver = new IntersectionObserver(([entry]) => {
-    if (!entry.isIntersecting) return;
-    cardGrid.querySelectorAll('.service-card').forEach((c, i) => {
-      setTimeout(() => c.classList.add('visible'), i * 100);
-    });
-    gridObserver.disconnect();
-  }, { threshold: 0.05 });
-  gridObserver.observe(cardGrid);
-}
-
-/* ── VEHICLE TILE HOVER ─────────────────────────────────────── */
-document.querySelectorAll('.vehicle-tile').forEach(tile => {
-  tile.addEventListener('mouseenter', () => {
-    tile.style.zIndex     = '2';
-    tile.style.transform  = 'scale(1.02)';
-    tile.style.transition = 'transform 0.5s cubic-bezier(0.25,0.46,0.45,0.94)';
-  });
-  tile.addEventListener('mouseleave', () => {
-    tile.style.transform = 'scale(1)';
-    setTimeout(() => tile.style.zIndex = '', 500);
-  });
-});
-
 /* ── INJECT KEYFRAMES ───────────────────────────────────────── */
 const style = document.createElement('style');
 style.textContent = `

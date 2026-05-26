@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 48" role="img" aria-label="Caltex">
+  <g transform="translate(0, 2)">
+    <path fill="#E31837" d="M22 2L2 22l20 20 20-20L22 2zm0 6.8L33.2 22 22 33.2 10.8 22 22 8.8z"/>
+    <path fill="#fff" d="M22 12l-7.5 10h15L22 12z"/>
+  </g>
+  <text x="52" y="32" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" fill="#E31837">CALTEX</text>
+</svg>
