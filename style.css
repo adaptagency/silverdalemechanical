@@ -6,19 +6,19 @@
   --red:       #0072BB;
   --red-dark:  #005A94;
   --red-glow:  rgba(0,114,187,0.11);
-  --dark:      #D2D7DE;
-  --dark2:     #DEE2E8;
-  --dark3:     #BFC5CE;
-  --mid:       #9CA3AF;
-  --steel:     #5C6570;
-  --silver:    #5C6570;
+  --dark:      #C1C7D0;
+  --dark2:     #CDD2DA;
+  --dark3:     #AEB4BE;
+  --mid:       #8E96A3;
+  --steel:     #505864;
+  --silver:    #505864;
   --light:     #1F2937;
   --white:     #FFFFFF;
   --heading:   #111827;
-  --text-muted:#505864;
-  --border:    #AEB5C0;
-  --surface:   #D8DCE3;
-  --surface-up:#E8EBF0;
+  --text-muted:#454F5C;
+  --border:    #9DA4AF;
+  --surface:   #C7CDD5;
+  --surface-up:#D6DAE2;
   --brand-navy:#1A4374;
 
   --font-display: 'Barlow Condensed', sans-serif;
@@ -158,7 +158,7 @@ iframe { display: block; }
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 1000;
-  background: rgba(232, 235, 240, 0.97);
+  background: rgba(214, 218, 226, 0.97);
   border-bottom: 1px solid var(--border);
   transition: box-shadow 0.3s;
   overflow: visible;
@@ -398,18 +398,21 @@ iframe { display: block; }
 .hero-bg {
   position: absolute;
   inset: 0;
+  z-index: 0;
   background-size: cover;
   background-position: center 30%;
-  opacity: 0.35;
+  background-repeat: no-repeat;
+  opacity: 0.62;
 }
 .hero-overlay {
   position: absolute;
   inset: 0;
+  z-index: 1;
   background: linear-gradient(
     110deg,
-    rgba(232, 235, 240, 0.97) 0%,
-    rgba(216, 220, 227, 0.92) 55%,
-    rgba(210, 215, 222, 0.88) 100%
+    rgba(193, 199, 208, 0.93) 0%,
+    rgba(193, 199, 208, 0.72) 50%,
+    rgba(193, 199, 208, 0.25) 100%
   );
 }
 .hero-content {
@@ -687,7 +690,7 @@ iframe { display: block; }
 }
 .services-overlay {
   position: absolute; inset: 0;
-  background: rgba(216, 220, 227, 0.9);
+  background: rgba(199, 205, 213, 0.9);
 }
 .services-section .container { position: relative; z-index: 2; }
 
@@ -833,7 +836,7 @@ iframe { display: block; }
 }
 .pq-overlay {
   position: absolute; inset: 0;
-  background: rgba(216, 220, 227, 0.88);
+  background: rgba(199, 205, 213, 0.88);
 }
 .pq-content {
   position: relative; z-index: 2;
@@ -871,7 +874,7 @@ cite {
 .why-bg { position: absolute; inset: 0; background-size: cover; background-position: center; opacity: 0.06; }
 .why-overlay {
   position: absolute; inset: 0;
-  background: rgba(216, 220, 227, 0.92);
+  background: rgba(199, 205, 213, 0.92);
 }
 .why-section .container { position: relative; z-index: 2; }
 .why-grid {
@@ -1003,7 +1006,7 @@ cite {
 }
 .booking-overlay {
   position: absolute; inset: 0;
-  background: rgba(216, 220, 227, 0.92);
+  background: rgba(199, 205, 213, 0.92);
 }
 .booking-section .container { position: relative; z-index: 2; }
 .booking-wrap {
@@ -1288,7 +1291,7 @@ cite {
 /* ═══════════════════════════════════════════ FOOTER ═══════════ */
 .site-footer { position: relative; padding: clamp(3.5rem,6vw,6rem) 0 0; background: var(--surface); border-top: 1px solid var(--border); }
 .footer-bg { position: absolute; inset: 0; background-size: cover; background-position: center; opacity: 0.04; }
-.footer-overlay { position: absolute; inset: 0; background: rgba(216, 220, 227, 0.94); }
+.footer-overlay { position: absolute; inset: 0; background: rgba(199, 205, 213, 0.94); }
 .footer-inner {
   position: relative; z-index: 2;
   display: grid;
