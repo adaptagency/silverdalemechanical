@@ -5,19 +5,20 @@
 :root {
   --red:       #0072BB;
   --red-dark:  #005A94;
-  --red-glow:  rgba(0,114,187,0.08);
-  --dark:      #F3F4F6;
-  --dark2:     #FFFFFF;
-  --dark3:     #EEF2F6;
-  --mid:       #D1D5DB;
-  --steel:     #6B7280;
-  --silver:    #6B7280;
+  --red-glow:  rgba(0,114,187,0.11);
+  --dark:      #D2D7DE;
+  --dark2:     #DEE2E8;
+  --dark3:     #BFC5CE;
+  --mid:       #9CA3AF;
+  --steel:     #5C6570;
+  --silver:    #5C6570;
   --light:     #1F2937;
   --white:     #FFFFFF;
   --heading:   #111827;
-  --text-muted:#6B7280;
-  --border:    #E5E7EB;
-  --surface:   #FFFFFF;
+  --text-muted:#505864;
+  --border:    #AEB5C0;
+  --surface:   #D8DCE3;
+  --surface-up:#E8EBF0;
   --brand-navy:#1A4374;
 
   --font-display: 'Barlow Condensed', sans-serif;
@@ -153,12 +154,12 @@ iframe { display: block; }
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 1000;
-  background: rgba(255,255,255,0.96);
+  background: rgba(232, 235, 240, 0.97);
   border-bottom: 1px solid var(--border);
   transition: box-shadow 0.3s;
 }
 #navbar.scrolled {
-  box-shadow: 0 2px 16px rgba(17,24,39,0.08);
+  box-shadow: 0 2px 20px rgba(17,24,39,0.12);
 }
 .nav-inner {
   display: flex;
@@ -290,7 +291,7 @@ iframe { display: block; }
 .mobile-menu {
   display: none;
   flex-direction: column;
-  background: var(--surface);
+  background: var(--surface-up);
   border-top: 1px solid var(--border);
   padding: 0.5rem 1.5rem 2rem;
   max-height: 0;
@@ -354,9 +355,9 @@ iframe { display: block; }
   inset: 0;
   background: linear-gradient(
     110deg,
-    rgba(255,255,255,0.96) 0%,
-    rgba(255,255,255,0.88) 55%,
-    rgba(243,244,246,0.82) 100%
+    rgba(232, 235, 240, 0.97) 0%,
+    rgba(216, 220, 227, 0.92) 55%,
+    rgba(210, 215, 222, 0.88) 100%
   );
 }
 .hero-content {
@@ -510,7 +511,7 @@ iframe { display: block; }
   line-height: 1.4;
 }
 .intro-text {
-  background: var(--surface);
+  background: var(--surface-up);
   padding: clamp(2.5rem, 6vw, 5.5rem) clamp(1.8rem, 5vw, 5rem);
   display: flex; flex-direction: column; justify-content: center;
   border-left: 1px solid var(--border);
@@ -584,7 +585,7 @@ iframe { display: block; }
 }
 .services-overlay {
   position: absolute; inset: 0;
-  background: rgba(255,255,255,0.92);
+  background: rgba(216, 220, 227, 0.9);
 }
 .services-section .container { position: relative; z-index: 2; }
 
@@ -595,7 +596,7 @@ iframe { display: block; }
   background: transparent;
 }
 .service-card {
-  background: var(--surface);
+  background: var(--surface-up);
   border: 1px solid var(--border);
   border-radius: 4px;
   display: flex; flex-direction: column;
@@ -606,7 +607,7 @@ iframe { display: block; }
 .service-card::after { display: none; }
 .service-card:hover {
   border-color: rgba(0,114,187,0.35);
-  box-shadow: 0 8px 24px rgba(17,24,39,0.06);
+  box-shadow: 0 10px 28px rgba(17,24,39,0.1);
 }
 
 .sc-img { height: 185px; overflow: hidden; }
@@ -730,7 +731,7 @@ iframe { display: block; }
 }
 .pq-overlay {
   position: absolute; inset: 0;
-  background: rgba(255,255,255,0.9);
+  background: rgba(216, 220, 227, 0.88);
 }
 .pq-content {
   position: relative; z-index: 2;
@@ -768,7 +769,7 @@ cite {
 .why-bg { position: absolute; inset: 0; background-size: cover; background-position: center; opacity: 0.06; }
 .why-overlay {
   position: absolute; inset: 0;
-  background: rgba(255,255,255,0.94);
+  background: rgba(216, 220, 227, 0.92);
 }
 .why-section .container { position: relative; z-index: 2; }
 .why-grid {
@@ -807,7 +808,7 @@ cite {
 
 .why-stats-panel { position: sticky; top: 100px; }
 .wsp-inner {
-  background: var(--surface);
+  background: var(--surface-up);
   border: 1px solid var(--border);
   padding: clamp(1.5rem,3vw,2.5rem);
   display: flex; flex-direction: column; gap: 1.8rem;
@@ -898,7 +899,7 @@ cite {
 }
 .booking-overlay {
   position: absolute; inset: 0;
-  background: rgba(255,255,255,0.94);
+  background: rgba(216, 220, 227, 0.92);
 }
 .booking-section .container { position: relative; z-index: 2; }
 .booking-wrap {
@@ -934,7 +935,7 @@ cite {
   padding: 0.28rem 0.75rem;
   border: 1px solid var(--border);
   border-radius: 3px;
-  background: var(--surface);
+  background: var(--surface-up);
 }
 .bp-logo-img {
   display: block;
@@ -946,7 +947,7 @@ cite {
   padding: 0.35rem 0.65rem;
   border: 1px solid var(--border);
   border-radius: 3px;
-  background: var(--surface);
+  background: var(--surface-up);
 }
 
 /* Booking tabs */
@@ -1008,7 +1009,7 @@ cite {
 
 /* Form */
 .booking-form {
-  background: var(--surface);
+  background: var(--surface-up);
   border: 1px solid var(--border);
   padding: clamp(1.5rem,3vw,2.5rem);
   border-radius: 4px;
@@ -1026,7 +1027,7 @@ cite {
 .form-group input,
 .form-group select,
 .form-group textarea {
-  background: var(--surface);
+  background: var(--white);
   border: 1px solid var(--border);
   color: var(--heading);
   padding: 0.78rem 0.95rem;
@@ -1045,7 +1046,7 @@ cite {
   padding-right: 2.3rem;
   cursor: pointer;
 }
-.form-group select option { background: var(--surface); color: var(--heading); }
+.form-group select option { background: var(--white); color: var(--heading); }
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
@@ -1178,7 +1179,7 @@ cite {
 /* ═══════════════════════════════════════════ FOOTER ═══════════ */
 .site-footer { position: relative; padding: clamp(3.5rem,6vw,6rem) 0 0; background: var(--surface); border-top: 1px solid var(--border); }
 .footer-bg { position: absolute; inset: 0; background-size: cover; background-position: center; opacity: 0.04; }
-.footer-overlay { position: absolute; inset: 0; background: rgba(255,255,255,0.96); }
+.footer-overlay { position: absolute; inset: 0; background: rgba(216, 220, 227, 0.94); }
 .footer-inner {
   position: relative; z-index: 2;
   display: grid;
@@ -1209,7 +1210,7 @@ cite {
   padding: 0.22rem 0.55rem;
   border: 1px solid var(--border);
   border-radius: 2px;
-  background: var(--surface);
+  background: var(--surface-up);
 }
 
 .footer-bar {
@@ -1255,7 +1256,7 @@ cite {
   width: 40px; height: 40px;
   border-radius: 50%;
   border: 1.5px solid var(--border);
-  background: var(--surface);
+  background: var(--surface-up);
   display: flex; align-items: center; justify-content: center;
   transition: background 0.2s, border-color 0.2s;
 }
@@ -1358,7 +1359,7 @@ cite {
   margin-bottom: 3rem;
 }
 .review-card {
-  background: var(--surface);
+  background: var(--surface-up);
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: 1.8rem 1.6rem 1.5rem;
@@ -1369,7 +1370,7 @@ cite {
 }
 .review-card:hover {
   border-color: rgba(0,114,187,0.35);
-  box-shadow: 0 8px 24px rgba(17,24,39,0.06);
+  box-shadow: 0 10px 28px rgba(17,24,39,0.1);
   transform: none;
 }
 
