@@ -108,7 +108,7 @@ Silverdale Mechanical Engineering is a full-service mechanical workshop based in
 
 ## Vehicle Types
 
-Cars & SUVs · Heavy Trucks · Motorhomes · Excavators · Diesel Vehicles · Plant & Equipment · Fleet Vehicles
+Cars & SUVs · Heavy Trucks · Motorhomes · Excavators · Diesel Vehicles · Fleet Vehicles
 
 ---
 

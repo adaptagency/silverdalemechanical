@@ -78,7 +78,7 @@ The site is a **single-page application** with the following sections:
 | 3 | Service marquee | Scrolling strip of service keywords |
 | 4 | About | Split-layout intro to the business |
 | 5 | Services | 9-card grid covering all workshop services |
-| 6 | Vehicle types | 7-tile grid: Cars & SUVs, Heavy Trucks, Motorhomes, Excavators, Diesel Vehicles, Plant & Equipment, Fleet Vehicles |
+| 6 | Vehicle types | 6-tile grid: Cars & SUVs, Heavy Trucks, Motorhomes, Excavators, Diesel Vehicles, Fleet Vehicles |
 | 7 | Parallax quote | Henry Ford quote over full-bleed background image |
 | 8 | Why Choose Us | Animated stat counters (years experience, jobs completed, etc.) |
 | 9 | How It Works | 4-step process section |

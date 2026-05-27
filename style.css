@@ -774,7 +774,7 @@ iframe { display: block; }
 .vehicles-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 280px 280px;
+  grid-template-rows: 280px 280px 280px;
   gap: 0.75rem;
 }
 .vehicle-tile {
@@ -788,6 +788,15 @@ iframe { display: block; }
 }
 /* wide tiles span 2 cols */
 .vt-wide { grid-column: span 2; }
+
+.vehicles-grid-pair {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  min-height: 280px;
+}
+.vehicles-grid-pair .vehicle-tile { min-height: 100%; }
 
 .vt-overlay {
   position: absolute; inset: 0;
@@ -1634,7 +1643,7 @@ cite {
   .why-grid { grid-template-columns: 1fr; gap: 3rem; }
   .why-stats-panel { position: static; }
   .wsp-inner { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
-  .vehicles-grid { grid-template-rows: 240px 240px; }
+  .vehicles-grid { grid-template-rows: 240px 240px 240px; }
 
   /* footer: row 1 brand, row 2 links + contact */
   .footer-inner {
@@ -1678,9 +1687,10 @@ cite {
   /* vehicles: 2-col */
   .vehicles-grid {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 220px 220px 220px;
+    grid-template-rows: 220px 220px 220px 220px;
   }
   .vt-wide { grid-column: span 2; }
+  .vehicles-grid-pair { min-height: 220px; }
 
   /* parallax – disable fixed attachment */
   .services-bg,
@@ -1733,9 +1743,13 @@ cite {
   /* vehicles 1-col */
   .vehicles-grid {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, 200px);
+    grid-template-rows: repeat(5, 200px);
   }
   .vt-wide { grid-column: span 1; }
+  .vehicles-grid-pair {
+    grid-column: span 1;
+    min-height: 200px;
+  }
 
   /* about perks 1-col */
   .intro-perks { grid-template-columns: 1fr; }
@@ -1778,7 +1792,8 @@ cite {
   .sc-img { height: 165px; }
 
   /* vehicles shorter on small phones */
-  .vehicles-grid { grid-template-rows: repeat(6, 180px); }
+  .vehicles-grid { grid-template-rows: repeat(5, 180px); }
+  .vehicles-grid-pair { min-height: 180px; }
 
   /* booking form */
   .booking-form { padding: 1.4rem 1.1rem; }
@@ -1820,7 +1835,8 @@ cite {
   .hero-title { font-size: 2.8rem; }
   .btn-primary, .btn-ghost { padding: 0.8rem 1.4rem; font-size: 0.82rem; }
   .sc-img { height: 140px; }
-  .vehicles-grid { grid-template-rows: repeat(6, 160px); }
+  .vehicles-grid { grid-template-rows: repeat(5, 160px); }
+  .vehicles-grid-pair { min-height: 160px; }
   .map-frame-wrap { height: 220px; }
   .wsp-inner { grid-template-columns: 1fr; }
 
