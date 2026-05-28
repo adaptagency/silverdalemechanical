@@ -1300,6 +1300,29 @@ cite {
   filter: none;
 }
 
+/* ═══════════════════════════════════════════ AUTOHIVE ═════════ */
+.autohive-section {
+  padding: 0 0 clamp(3rem, 6vw, 5rem);
+  background: var(--dark3);
+}
+.autohive-banner {
+  display: block;
+  padding: clamp(0.65rem, 2vw, 0.85rem) clamp(0.75rem, 2.5vw, 1rem);
+  background: var(--white);
+  border: 1px solid var(--red);
+  border-radius: 10px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.autohive-banner:hover {
+  border-color: var(--red-dark);
+  box-shadow: 0 4px 24px var(--red-glow);
+}
+.autohive-banner-img {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
 /* ═══════════════════════════════════════════ FOOTER ═══════════ */
 .site-footer { position: relative; padding: clamp(3.5rem,6vw,6rem) 0 0; background: var(--surface); border-top: 1px solid var(--border); }
 .footer-bg { position: absolute; inset: 0; background-size: cover; background-position: center; opacity: 0.04; }
