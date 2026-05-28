@@ -1301,11 +1301,8 @@ cite {
 }
 
 /* ═══════════════════════════════════════════ AUTOHIVE ═════════ */
-.contact-section:has(+ .autohive-section) {
-  padding-bottom: clamp(2rem, 4vw, 3rem);
-}
 .autohive-section {
-  padding: 0;
+  padding: 0 0 clamp(3rem, 6vw, 5rem);
   background: var(--dark3);
 }
 .autohive-banner {
