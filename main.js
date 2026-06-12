@@ -4,6 +4,11 @@
 
 'use strict';
 
+/* ── WEB3FORMS CONFIG ───────────────────────────────────────── */
+/* Sign up at web3forms.com → Dashboard → Create form → Copy Access Key */
+const WEB3FORMS_ACCESS_KEY = '2d8987f0-ff40-4a5a-8d94-1c66d9d09eb8';     // ← Set me
+const WEB3FORMS_URL        = 'https://api.web3forms.com/submit';
+
 /* ── NAV SCROLL ─────────────────────────────────────────────── */
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
@@ -87,7 +92,8 @@ setMinDate('q-date');
 setMinDate('s-date');
 
 /* ── FORM HANDLER ───────────────────────────────────────────── */
-function handleForm(form, successId, submitLabel, submitIcon) {
+
+function handleForm(form, successId, submitLabel, submitIcon, formType) {
   const successEl = document.getElementById(successId);
 
   form.addEventListener('submit', e => {
@@ -110,7 +116,16 @@ function handleForm(form, successId, submitLabel, submitIcon) {
       return;
     }
 
-    // Simulate submission — replace with real API / EmailJS / AutoHive call
+    // Collect form data
+    const data = {};
+    form.querySelectorAll('[name]').forEach(field => {
+      data[field.name] = field.value.trim();
+    });
+    data.access_key = WEB3FORMS_ACCESS_KEY;
+    data.replyto = data.email || '';
+    data.form_type = formType;
+
+    // Sending state
     const btn = form.querySelector('.submit-btn');
     btn.disabled = true;
     btn.innerHTML = `
@@ -120,14 +135,29 @@ function handleForm(form, successId, submitLabel, submitIcon) {
       Sending…
     `;
 
-    setTimeout(() => {
-      form.reset();
-      btn.disabled = false;
-      btn.innerHTML = submitIcon + submitLabel;
-      successEl.classList.add('show');
-      successEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      setTimeout(() => successEl.classList.remove('show'), 8000);
-    }, 1400);
+    fetch(WEB3FORMS_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(data)
+    })
+      .then(res => res.json())
+      .then(res => {
+        if (res.success) {
+          form.reset();
+          btn.disabled = false;
+          btn.innerHTML = submitIcon + submitLabel;
+          successEl.classList.add('show');
+          successEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          setTimeout(() => successEl.classList.remove('show'), 8000);
+        } else {
+          throw new Error(res.message || 'Submission failed');
+        }
+      })
+      .catch(() => {
+        btn.disabled = false;
+        btn.innerHTML = submitIcon + submitLabel;
+        alert('Something went wrong. Please email us directly at admin@silverdalemechanical.com or call (09) 426 8194.');
+      });
   });
 }
 
@@ -142,8 +172,8 @@ const wrenchIcon = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" s
   <path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/>
 </svg>`;
 
-handleForm(quoteForm,   'quoteSuccess',   'Request Free Quote',      calIcon);
-handleForm(serviceForm, 'serviceSuccess', 'Confirm Service Booking', wrenchIcon);
+handleForm(quoteForm,   'quoteSuccess',   'Request Free Quote',      calIcon,    'Free Quote');
+handleForm(serviceForm, 'serviceSuccess', 'Confirm Service Booking', wrenchIcon, 'Service Booking');
 
 /* ── SCROLL REVEAL ──────────────────────────────────────────── */
 const revealObserver = new IntersectionObserver((entries) => {

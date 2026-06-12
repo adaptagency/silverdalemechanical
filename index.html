@@ -752,7 +752,11 @@
         <div class="booking-right">
 
           <!-- ── FORM: Free Quote ── -->
-          <form class="booking-form" id="quoteForm" data-form="quote" novalidate>
+          <form class="booking-form" id="quoteForm" data-form="quote" action="https://api.web3forms.com/submit" method="POST" novalidate>
+            <input type="hidden" name="access_key" value="2d8987f0-ff40-4a5a-8d94-1c66d9d09eb8">
+            <input type="hidden" name="subject" value="Silverdale Mechanical — New Free Quote Request">
+            <input type="hidden" name="replyto" value="">
+            <input type="hidden" name="form_type" value="Free Quote">
             <div class="form-row">
               <div class="form-group">
                 <label for="q-fname">First Name *</label>
@@ -838,7 +842,11 @@
           </form>
 
           <!-- ── FORM: Book a Service ── -->
-          <form class="booking-form hidden" id="serviceForm" data-form="service" novalidate>
+          <form class="booking-form hidden" id="serviceForm" data-form="service" action="https://api.web3forms.com/submit" method="POST" novalidate>
+            <input type="hidden" name="access_key" value="2d8987f0-ff40-4a5a-8d94-1c66d9d09eb8">
+            <input type="hidden" name="subject" value="Silverdale Mechanical — New Service Booking">
+            <input type="hidden" name="replyto" value="">
+            <input type="hidden" name="form_type" value="Service Booking">
             <div class="form-row">
               <div class="form-group">
                 <label for="s-fname">First Name *</label>
