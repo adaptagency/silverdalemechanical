@@ -1257,6 +1257,12 @@ cite {
   align-items: center;
 }
 .contact-cta-btn { margin-top: 0; }
+.contact-autohive-row { margin-top: 1.75rem; }
+.contact-autohive-banner {
+  max-width: 280px;
+  padding: 0.55rem 0.65rem;
+}
+.contact-autohive-img { max-width: 240px; }
 .btn-directions {
   display: inline-flex;
   align-items: center;
@@ -1321,6 +1327,12 @@ cite {
   width: 100%;
   height: auto;
   margin: 0 auto;
+}
+
+@media (max-width: 640px) {
+  .contact-autohive-row { margin-top: 1.5rem; }
+  .contact-autohive-banner { max-width: 100%; }
+  .contact-autohive-img { max-width: 220px; }
 }
 
 /* ═══════════════════════════════════════════ FOOTER ═══════════ */
