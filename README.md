@@ -1,224 +1,107 @@
 # Silverdale Mechanical Engineering — Website
 
-Live website for **Silverdale Mechanical Engineering**, Auckland's trusted mechanics for cars, trucks, motorhomes, and heavy machinery. Served at [https://silverdalemechanical.com](https://silverdalemechanical.com) via GitHub Pages.
+Live website for **Silverdale Mechanical Engineering**, Auckland's trusted mechanics for cars, trucks, motorhomes, and heavy machinery.
 
----
+## Overview
 
-## Live Site
+Silverdale Mechanical Engineering is a full-service mechanical workshop in Silverdale, Auckland NZ, servicing cars, trucks, motorhomes and heavy machinery (petrol + diesel, all makes). This repo is the static site (pure HTML/CSS/JS, no build tools) served via GitHub Pages at the live domain, with a Cloudflare Pages staging deploy for client review. Recent work: 8 SEO service pages + services landing page, SEO foundation (JSON-LD, sitemap/robots, llms.txt).
 
-**Production:** [https://silverdalemechanical.com](https://silverdalemechanical.com) — served via GitHub Pages (custom domain).
+## Quick Links
 
-**Staging:** [https://silverdalemechanical-staging.pages.dev](https://silverdalemechanical-staging.pages.dev) — Cloudflare Pages deploy of the `staging` branch for client review. Production is only updated after client approval — changes must be approved before merge/deploy to `main`.
+| Link | URL |
+|---|---|
+| Production | https://silverdalemechanical.com |
+| Staging | https://silverdalemechanical-staging.pages.dev |
+| Services landing (production) | https://silverdalemechanical.com/services/ |
+| Repo | https://github.com/adaptagency/silverdalemechanical |
 
-## Current Work
+## Status
 
-- **Services/ SEO pages** — 5 dedicated service pages (`diesel-servicing`, `cof-wof-checks`, `engine-rebuilds`, `mobile-onsite-service`, `hydraulic-systems`) plus a `services/index.html` landing page are in progress on the `staging` branch for client review. **Not yet in production** — `main` / silverdalemechanical.com remains unchanged until the client approves.
+**🧪 Staging** — 8 service pages + SEO foundation built on `staging`; pending client review before merge to `main`/production.
 
----
+## Active Tasks
 
-## Project Structure
+- [x] 8 service pages (diesel, engine rebuilds, COF/WOF, mobile on-site, hydraulics, plant/machinery, motorhome/coach, pre-purchase) + `services/index.html`
+- [x] SEO foundation: JSON-LD `AutoRepair` (4.7/100 aggregate + 4 real reviews), `sitemap.xml`, `robots.txt`, `llms.txt`
+- [x] Responsive QA (10 pages × 3 viewports — no horizontal scroll)
+- [ ] Client review of staging → then merge `staging` → `main` + deploy production
+- [ ] Replace `PLACEHOLDER_GSC_TOKEN` in index.html with the real Google Search Console token, verify, submit sitemap
+- [ ] Analytics (e.g. Plausible/Fathom) — nothing running yet
+- [ ] Refactor header/footer to common, responsive shared partial (Steve note, 31 Aug 2026)
+
+## Recent Changes
+
+| Date | Change |
+|---|---|
+| 31 Aug 2026 | Built 8 service pages + services landing; wired home/service cards "More details"; made all footers consistent (8 links incl. Pre-Purchase); added SEO foundation (AutoRepair JSON-LD with real reviews, sitemap, robots, llms.txt, GSC placeholder) + full responsive pass; refreshed README to live build |
+| 29 Aug 2026 | README corrected: live design is light blue/white (#0072BB), not the stale crimson/near-black |
+
+## Decision Log
+
+| Date | Decision | Rationale |
+|---|---|---|
+| 31 Aug 2026 | Build individual service pages (SEO) on staging; production unchanged until client approval | Multi-page keyword surface + client review gate |
+| 31 Aug 2026 | Add `llms.txt` + structured data for AI-search visibility | Future-proof organic/AI discovery at zero cost |
+| 31 Aug 2026 | Header/footer should be a common, responsive shared partial (future) | Prevents copy-paste drift (7 vs 8 footer links, wrong hrefs) |
+
+## Tech Stack
+
+| Service | Purpose |
+|---|---|
+| GitHub Pages | Production hosting (custom domain) |
+| Cloudflare Pages | Staging hosting |
+| Web3Forms | Booking form submission (front-end, no backend) |
+| GitHub | Source control |
+
+## Repo Structure
 
 ```
-silverdalemechanical/
-├── index.html          # Single-page application
-├── style.css           # Full stylesheet with responsive breakpoints
+├── index.html          # Home page (single-page SPA + JSON-LD + GSC meta)
+├── style.css           # Stylesheet with responsive breakpoints
 ├── main.js             # Vanilla JS — animations, counters, forms, nav
-├── favicon.svg         # SVG favicon
-├── privacy-policy.html # Privacy policy page
-├── terms-of-use.html   # Terms of use page
-├── services/           # SEO service pages — in progress on staging (not in production)
-└── images/             # 21 locally-hosted AI-generated images (~5 MB total)
-    ├── hero-truck-highway.jpg
-    ├── workshop-interior.jpg
-    ├── bg-services-dark.jpg
-    ├── bg-parallax-quote.jpg
-    ├── service-diesel-servicing.jpg
-    ├── service-plant-machinery.jpg
-    ├── service-engineering-welding.jpg
-    ├── service-cof-wof-checks.jpg
-    ├── service-mobile-onsite.jpg
-    ├── service-motorhome.jpg
-    ├── service-hydraulic-systems.jpg
-    ├── service-engine-rebuilds.jpg
-    ├── service-prepurchase-inspection.jpg
-    ├── vehicle-heavy-trucks.jpg
-    ├── vehicle-motorhomes.jpg
-    ├── vehicle-excavators.jpg
-    ├── vehicle-diesel-vehicles.jpg
-    ├── vehicle-plant-equipment.jpg
-    ├── vehicle-fleet-vehicles.jpg
-    └── vehicle-cars-suv.jpg
+├── services/           # 8 SEO service pages + services/index.html
+├── sitemap.xml         # XML sitemap
+├── robots.txt          # Robots + Sitemap reference
+├── llms.txt            # AI-search visibility file
+├── privacy-policy.html
+├── terms-of-use.html
+└── images/             # 21 locally-hosted AI-generated images
 ```
 
-No build tools. No frameworks. No dependencies. Pure HTML, CSS and JavaScript.
-All images are stored locally in the repository — no external CDN dependencies.
+## Deployment
 
----
-
-## About the Business
-
-Silverdale Mechanical Engineering is a full-service mechanical workshop based in Silverdale, Auckland. The business services a wide range of vehicles including **cars and SUVs** alongside heavy commercial vehicles — covering petrol and diesel, all makes. Services span general mechanical repairs, diesel servicing, engine rebuilds, hydraulic systems, mobile on-site service, and COF/WOF compliance checks.
-
----
-
-## Design
-
-| Property             | Value                                                                 |
-|---------------------|------------------------------------------------------------------------|
-| Theme               | Light blue + white, premium automotive                                |
-| Primary colour      | Blue `#0072BB`                                                        |
-| Background          | White / light surfaces                                                |
-| Accents             | Green `#10B981` · amber `#F9A825`                                     |
-| Fonts               | `--font-display` · `--font-hero` · `--font-condensed` · `--font-body` (Bebas Neue · Barlow Condensed · Inter) |
-| Images              | AI-generated via `fal-ai/flux-2-pro`, hosted locally in `/images`     |
-| Language            | British English (`lang=en-GB`)                                        |
-
-### Design Principles
-
-- **No horizontal dividers** — free-flowing, full-bleed section transitions
-- Full-screen background images throughout
-- Clean, professional automotive feel appropriate to a trusted trade brand
-
----
-
-## Sections
-
-| #  | Section                                                      | ID         |
-|----|--------------------------------------------------------------|------------|
-| 1  | Fixed navbar (frosted glass, hamburger on mobile)            | `#navbar`  |
-| 2  | Full-screen hero with Ken Burns zoom                         | `#hero`    |
-| 3  | Scrolling service marquee strip                              | —          |
-| 4  | About / intro split                                          | `#about`   |
-| 5  | 9-card services grid                                         | `#services`|
-| 6  | 7-tile vehicle types grid                                    | `#vehicles`|
-| 7  | Parallax quote (Henry Ford)                                  | —          |
-| 8  | Why Choose Us with animated stat counters                    | `#why-us`  |
-| 9  | 4-step How It Works process                                  | —          |
-| 10 | Two-tab booking section (Free Quote / Book a Service)        | `#booking` |
-| 11 | Contact info + Get Directions + Google Maps embed            | `#contact` |
-| 12 | 4-column footer                                              | —          |
-
----
-
-## Services Covered
-
-- **Car & SUV Servicing** (petrol & diesel, all makes)
-- Diesel Servicing (oil & filter, top tunes, clutch, belts)
-- Plant & Machinery (excavators, bulldozers, on-site)
-- Engineering & Welding (MIG, TIG, arc, fabrication)
-- COF & WOF Pre-Checks
-- Mobile On-Site Service
-- Motorhome & Coach Servicing
-- Hydraulic Systems
-- Engine Rebuilds
-- Pre-Purchase Inspections
-
-## Vehicle Types
-
-Cars & SUVs · Heavy Trucks · Motorhomes · Excavators · Diesel Vehicles · Fleet Vehicles
-
----
-
-## Features
-
-### Navigation
-- Two CTAs in the navbar: **Free Quote** (outline) and **Book a Service** (filled blue)
-- Both link to `#booking` and auto-activate the corresponding form tab via `data-tab` attribute
-- Hamburger mobile menu mirrors both CTAs
-- Smooth-scroll with navbar-height offset
-
-### Booking Section (Two Tabs)
-
-The booking section hosts two separate forms behind a tab switcher:
-
-| Tab                 | Audience             | Extra Fields                                   | Submit Label            |
-|---------------------|----------------------|------------------------------------------------|------------------------|
-| **Free Quote**      | New customers        | —                                              | Request Free Quote     |
-| **Book a Service**  | Returning customers  | Registration number, Workshop or Mobile preference | Confirm Service Booking |
-
-**Shared fields:** First name, last name, phone, email, vehicle type, service required, preferred date (native `<input type=date>`), preferred time slot, optional message.
-
-Date input uses the browser's native date picker — no third-party calendar library is used.
-
-- Client-side validation with inline error states and shake animation
-- Success confirmation message on submit (auto-hides after 8 seconds)
-- Forms submit via **Web3Forms** front-end submission (access key configured in `main.js`) — no backend server or routing involved
-- Deep-linking: any `<a href=#booking data-tab=quote|service>` anywhere on the page scrolls to the section and activates the correct tab
-
-### Contact Section
-- Phone, email, address, business hours
-- **Get Directions** — inline link beneath address + standalone button, both opening Google Maps directions to Silverdale Mechanical Engineering in a new tab
-- Embedded Google Maps iframe (Silverdale, Auckland)
-
-### Interactivity
-- Scroll-triggered reveal animations (Intersection Observer)
-- Animated stat counters (counts up on scroll into view)
-- Card tilt effect on hover (mouse-tracking, disabled on touch devices)
-- Parallax background scrolling (desktop only, ≥ 900px)
-- Sticky navbar with scroll-state frosted-glass effect
-
----
-
-## Responsive Breakpoints
-
-| Breakpoint | Layout change                                                        |
-|------------|---------------------------------------------------------------------|
-| ≤ 1100 px  | Services 2-column · footer 2-column                                 |
-| ≤ 900 px   | Nav collapses to hamburger · sections stack · parallax disabled      |
-| ≤ 700 px   | Services & vehicles 1-column · form rows stack · hero buttons stack |
-| ≤ 480 px   | Compact typography · shorter images · tighter spacing · CTA buttons full-width |
-| ≤ 360 px   | Minimum viable layout                                               |
-
----
-
-## Authorised Partners
-
-| Partner     | Role                                  |
-|-------------|---------------------------------------|
-| MTA Assured | Motor Trade Association membership    |
-| Kobelco     | Authorised service agent              |
-| Attach2     | Authorised agent                      |
-| Caltex      | Preferred oils & lubricants           |
-
-Workshop management powered by **[AutoHive](https://autohive.co.nz/)**.
-
----
-
-## Running Locally
-
-**Python (built-in):**
+**Staging:**
 ```bash
-python3 -m http.server 3000
-# → http://localhost:3000
+# from repo root (exclude .venv/.git — build a clean dist bundle)
+cp index.html style.css main.js favicon.svg privacy-policy.html terms-of-use.html sitemap.xml robots.txt llms.txt /tmp/sme-dist/
+cp -r services images /tmp/sme-dist/
+npx wrangler pages deploy /tmp/sme-dist --project-name=silverdalemechanical-staging --branch=staging
 ```
 
-**Node.js:**
-```bash
-npx serve .
-# or
-npx http-server -p 3000
-```
+**Production:** merge `staging` → `main`; GitHub Pages serves `silverdalemechanical.com`.
 
-**VS Code:** Install the _Live Server_ extension and click **Go Live**.
+## Contacts
 
----
+| Role | Name | Contact |
+|---|---|---|
+| Client | Silverdale Mechanical Engineering | admin@silverdalemechanical.com · (09) 426 8194 |
+| Lead | Steve Hodgson | steve@adaptagency.com.au |
 
-## Planned / Future Work
+## Config & Secrets
 
-- [ ] **Google Search Console** — verification meta tag (not yet implemented)
-- [ ] **SEO files** — `sitemap.xml` + `robots.txt` (not yet implemented)
-- [ ] **JSON-LD structured data** — `LocalBusiness` / `AutoRepair` schema (not yet implemented)
-- [ ] **Analytics** — privacy-friendly analytics (e.g. Plausible, Fathom) — nothing running yet
+- Web3Forms access key: in `main.js` (front-end submit)
+- Google Search Console: replace `PLACEHOLDER_GSC_TOKEN` in index.html with the real verification token
+- Cloudflare Pages: account API token via wrangler auth
 
----
+## Known Issues
 
-## Contact
+- `privacy-policy.html` + `terms-of-use.html` still use the older 7-link anchor footer (not yet aligned to the 8-link consistent footer; to be done with the shared-partial refactor)
+- `.venv/` (python/playwright, ~156M) is untracked in the repo — deploys must exclude it
+- Staging preview URLs are per-deployment hashes; share the current deployment URL, not a fixed one
+- Home phone in README/docs historically stale: live + verified is `(09) 426 8194` (not 4181)
 
-**Silverdale Mechanical Engineering**
-Silverdale, Auckland, New Zealand
-📞 (09) 426 4181
-✉️ admin@silverdalemechanical.com
+## Testing
 
----
+**Status:** ✅ Responsive QA passed — 10 pages × 3 viewports (desktop/tablet/mobile), zero horizontal scroll. SEO/JSON-LD validated. Awaiting client sign-off before production merge.
 
-© 2025 Silverdale Mechanical Engineering. All rights reserved.
+Manual client review checklist: Services nav scrolls to section; each card "More details" → its page; services landing shows 8 visible "More details"; footers consistent (8 links); booking forms work; JSON-LD passes Rich Results validation once production; GSC token replaced.
