@@ -1,12 +1,18 @@
 # Silverdale Mechanical Engineering — Website
 
-Premium single-page website for **Silverdale Mechanical Engineering**, Auckland's trusted mechanics for cars, trucks, motorhomes, and heavy machinery. Built to replace the legacy site at [silverdalemechanical.com](https://silverdalemechanical.com).
+Live website for **Silverdale Mechanical Engineering**, Auckland's trusted mechanics for cars, trucks, motorhomes, and heavy machinery. Served at [https://silverdalemechanical.com](https://silverdalemechanical.com) via GitHub Pages.
 
 ---
 
 ## Live Site
 
-**GitHub Pages:** [https://adaptagency.github.io/silverdalemechanical](https://adaptagency.github.io/silverdalemechanical)
+**Production:** [https://silverdalemechanical.com](https://silverdalemechanical.com) — served via GitHub Pages (custom domain).
+
+**Staging:** [https://silverdalemechanical-staging.pages.dev](https://silverdalemechanical-staging.pages.dev) — Cloudflare Pages deploy of the `staging` branch for client review. Production is only updated after client approval — changes must be approved before merge/deploy to `main`.
+
+## Current Work
+
+- **Services/ SEO pages** — 5 dedicated service pages (`diesel-servicing`, `cof-wof-checks`, `engine-rebuilds`, `mobile-onsite-service`, `hydraulic-systems`) plus a `services/index.html` landing page are in progress on the `staging` branch for client review. **Not yet in production** — `main` / silverdalemechanical.com remains unchanged until the client approves.
 
 ---
 
@@ -20,6 +26,7 @@ silverdalemechanical/
 ├── favicon.svg         # SVG favicon
 ├── privacy-policy.html # Privacy policy page
 ├── terms-of-use.html   # Terms of use page
+├── services/           # SEO service pages — in progress on staging (not in production)
 └── images/             # 21 locally-hosted AI-generated images (~5 MB total)
     ├── hero-truck-highway.jpg
     ├── workshop-interior.jpg
@@ -58,11 +65,11 @@ Silverdale Mechanical Engineering is a full-service mechanical workshop based in
 
 | Property             | Value                                                                 |
 |---------------------|------------------------------------------------------------------------|
-| Theme               | Dark premium industrial                                               |
-| Primary colour      | Crimson `#E8231A`                                                     |
-| Background          | Near-black `#0a0a0a`                                                  |
-| Accent              | Silver / light grey                                                   |
-| Fonts               | Bebas Neue · Barlow Condensed · Inter (Google Fonts)                  |
+| Theme               | Light blue + white, premium automotive                                |
+| Primary colour      | Blue `#0072BB`                                                        |
+| Background          | White / light surfaces                                                |
+| Accents             | Green `#10B981` · amber `#F9A825`                                     |
+| Fonts               | `--font-display` · `--font-hero` · `--font-condensed` · `--font-body` (Bebas Neue · Barlow Condensed · Inter) |
 | Images              | AI-generated via `fal-ai/flux-2-pro`, hosted locally in `/images`     |
 | Language            | British English (`lang=en-GB`)                                        |
 
@@ -70,7 +77,7 @@ Silverdale Mechanical Engineering is a full-service mechanical workshop based in
 
 - **No horizontal dividers** — free-flowing, full-bleed section transitions
 - Full-screen background images throughout
-- Cinematic, editorial feel appropriate to a premium trade brand
+- Clean, professional automotive feel appropriate to a trusted trade brand
 
 ---
 
@@ -115,7 +122,7 @@ Cars & SUVs · Heavy Trucks · Motorhomes · Excavators · Diesel Vehicles · Fl
 ## Features
 
 ### Navigation
-- Two CTAs in the navbar: **Free Quote** (outline) and **Book a Service** (filled red)
+- Two CTAs in the navbar: **Free Quote** (outline) and **Book a Service** (filled blue)
 - Both link to `#booking` and auto-activate the corresponding form tab via `data-tab` attribute
 - Hamburger mobile menu mirrors both CTAs
 - Smooth-scroll with navbar-height offset
@@ -135,7 +142,7 @@ Date input uses the browser's native date picker — no third-party calendar lib
 
 - Client-side validation with inline error states and shake animation
 - Success confirmation message on submit (auto-hides after 8 seconds)
-- Currently front-end only — wire to a backend or service (e.g. Formspree, EmailJS, AutoHive API) as needed
+- Forms submit via **Web3Forms** front-end submission (access key configured in `main.js`) — no backend server or routing involved
 - Deep-linking: any `<a href=#booking data-tab=quote|service>` anywhere on the page scrolls to the section and activates the correct tab
 
 ### Contact Section
@@ -198,8 +205,10 @@ npx http-server -p 3000
 
 ## Planned / Future Work
 
-- [ ] **Form backend (EmailJS)** — connect booking forms to EmailJS to deliver quote and service submissions directly to the workshop inbox. Two forms (Free Quote and Book a Service) need separate email templates configured.
-- [ ] **Analytics** — add privacy-friendly analytics (e.g. Plausible, Fathom)
+- [ ] **Google Search Console** — verification meta tag (not yet implemented)
+- [ ] **SEO files** — `sitemap.xml` + `robots.txt` (not yet implemented)
+- [ ] **JSON-LD structured data** — `LocalBusiness` / `AutoRepair` schema (not yet implemented)
+- [ ] **Analytics** — privacy-friendly analytics (e.g. Plausible, Fathom) — nothing running yet
 
 ---
 
