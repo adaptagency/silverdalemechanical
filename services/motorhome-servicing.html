@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Motorhome Servicing Auckland | Coach Servicing Silverdale | Silverdale Mechanical</title>
+  <meta name="description" content="Motorhome servicing Auckland and coach servicing Silverdale — diesel drivetrain servicing, chassis &amp; suspension, brake system overhaul, pre-trip safety inspections and WOF/COF compliance. MTA Assured." />
+  <link rel="canonical" href="https://silverdalemechanical.com/services/motorhome-servicing.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=Barlow+Condensed:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    /* ═══ Service page shell (matches site design system) ═══ */
+    .svc-page { background: var(--dark); }
+    .page-hero {
+      position: relative;
+      padding: 0 0 clamp(1.5rem, 4vw, 3rem);
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      overflow: hidden;
+    }
+    .page-hero .hero-bg { opacity: 0.55; background-position: center 35%; }
+    .page-hero .hero-content { padding-bottom: calc(var(--nav-h) + 1rem); }
+    .page-hero .hero-title { font-size: clamp(2.4rem, 6.5vw, 5rem); margin-bottom: 1.1rem; }
+    .page-hero .hero-sub { margin-bottom: 1.8rem; }
+    .svc-section { padding: clamp(3.5rem, 7vw, 6.5rem) 0; background: var(--surface); }
+    .svc-section--alt { background: var(--dark3); }
+    .svc-grid { display: grid; grid-template-columns: 1.25fr 1fr; gap: clamp(2rem, 4vw, 4rem); align-items: start; }
+    .svc-grid > * { min-width: 0; }
+    .svc-section h2 { margin-bottom: 1.1rem; }
+    .svc-section--alt h2 { margin-bottom: 1.1rem; }
+    .svc-body p { font-size: 1rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 1.1rem; }
+    .svc-body strong { color: var(--heading); }
+    .svc-body a { color: var(--red); border-bottom: 1px solid rgba(0,114,187,0.35); transition: border-color 0.2s; }
+    .svc-body a:hover { border-color: var(--red); }
+    .svc-list-panel {
+      background: var(--surface-up);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: clamp(1.4rem, 3vw, 2rem);
+    }
+    .svc-list-panel h3 {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(1.1rem, 2vw, 1.3rem);
+      letter-spacing: 0.02em;
+      color: var(--heading);
+      margin-bottom: 1rem;
+    }
+    .svc-list-panel p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 0.9rem; }
+    .svc-list-panel ul { list-style: none; display: flex; flex-direction: column; gap: 0.55rem; }
+    .svc-list-panel li { font-size: 0.9rem; color: var(--text-muted); padding-left: 1.15rem; position: relative; line-height: 1.6; }
+    .svc-list-panel li::before { content: '→'; position: absolute; left: 0; color: var(--red); font-size: 0.8rem; top: 1px; }
+    .svc-perks { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.8rem; margin-top: 1.6rem; }
+    .svc-perk {
+      background: var(--surface-up);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 1rem 1.1rem;
+      display: flex; align-items: center; gap: 0.7rem;
+      font-family: var(--font-display); font-weight: 700;
+      font-size: 0.92rem; letter-spacing: 0.05em; text-transform: uppercase;
+      color: var(--heading);
+    }
+    .svc-perk svg { width: 18px; height: 18px; stroke: var(--red); flex-shrink: 0; }
+    .svc-cta {
+      background: var(--surface-up);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: clamp(3.5rem, 7vw, 6rem) 0;
+      text-align: center;
+    }
+    .svc-cta .section-tag { margin-bottom: 1.2rem; }
+    .svc-cta .section-title { margin-bottom: 1.2rem; }
+    .svc-cta-sub { max-width: 580px; margin: 0 auto clamp(1.6rem, 3vw, 2.2rem); font-size: 1rem; color: var(--text-muted); line-height: 1.7; }
+    .svc-cta-actions { display: flex; flex-wrap: wrap; gap: 0.9rem; justify-content: center; margin-bottom: 1.6rem; }
+    .svc-cta-note { font-size: 0.85rem; color: var(--text-muted); }
+    .svc-cta-note a { color: var(--red); border-bottom: 1px solid rgba(0,114,187,0.35); }
+    @media (max-width: 900px) { .svc-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 700px) { .svc-perks { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body class="svc-page">
+
+  <!-- ══════════════ NAV ══════════════ -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">
+        <img src="../images/logo-silverdale-mechanical.png" alt="Silverdale Mechanical" class="site-logo" width="564" height="480" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="../services/index.html" class="active">Services</a></li>
+        <li><a href="../index.html#vehicles">Vehicles</a></li>
+        <li><a href="../index.html#why-us">Why Us</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <div class="nav-actions">
+          <a href="tel:094268194" class="nav-phone" aria-label="Call (09) 426 8194">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.79 12 19.79 19.79 0 01.72 3.38 2 2 0 012.7 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.64a16 16 0 006.29 6.29l1.42-1.42a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            <span class="nav-phone-num">(09) 426 8194</span>
+          </a>
+          <div class="nav-ctas">
+            <a href="../index.html#booking" class="nav-cta nav-cta--outline">Free Quote</a>
+            <a href="../index.html#booking" class="nav-cta">Book a Service</a>
+          </div>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="../services/index.html" class="mm-link">Services</a>
+      <a href="../index.html#vehicles" class="mm-link">Vehicles</a>
+      <a href="../index.html#why-us" class="mm-link">Why Us</a>
+      <a href="../index.html#contact" class="mm-link">Contact</a>
+      <a href="../index.html#booking" class="mm-cta">Book a Service</a>
+      <a href="../index.html#booking" class="mm-cta mm-cta--outline">Free Quote</a>
+    </div>
+  </nav>
+
+  <!-- ══════════════ HERO ══════════════ -->
+  <section class="page-hero">
+    <div class="hero-bg" style="background-image:url('../images/service-motorhome.jpg')"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-badge">Motorhomes &amp; Coaches — Silverdale &amp; Auckland</div>
+      <h1 class="hero-title">
+        <span class="line1">MOTORHOME SERVICING AUCKLAND</span>
+        <span class="line2">COACH SERVICING &amp; MAINTENANCE</span>
+      </h1>
+      <p class="hero-sub">Specialist motorhome and coach mechanical servicing from the workshop Silverdale and North Auckland trust. From diesel drivetrains to chassis maintenance — we understand the unique demands of large recreational and commercial coaches.</p>
+      <div class="hero-actions">
+        <a href="../index.html#booking" class="btn-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Book a Free Quote
+        </a>
+        <a href="tel:094268194" class="btn-ghost">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.79 12 19.79 19.79 0 01.72 3.38 2 2 0 012.7 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.64a16 16 0 006.29 6.29l1.42-1.42a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          Call (09) 426 8194
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <main>
+
+    <!-- ══════════════ INTRO ══════════════ -->
+    <section class="svc-section">
+      <div class="container">
+        <div class="svc-grid">
+          <div class="svc-body">
+            <div class="section-tag">Motorhome Servicing</div>
+            <h2 class="section-title">Motorhome Servicing, Auckland<br><em>Done Right</em></h2>
+            <p><strong>Silverdale Mechanical Engineering</strong> is a full-service mechanical workshop in Silverdale, North Auckland, with specialist understanding of large diesel drivetrains. We keep motorhomes, camper vans, buses and coaches safe, reliable and ready for the road — petrol and diesel, all makes.</p>
+            <p>Our motorhome servicing covers diesel drivetrain servicing, chassis and suspension, brake system overhauls and pre-trip safety inspections — always to <strong>manufacturer specifications</strong>, using quality <strong>Caltex</strong> oils and lubricants. We also help you stay on the right side of compliance with WOF and COF checks.</p>
+            <p>As an <strong>MTA Assured</strong> member with over 45 years of experience, we understand the unique demands of large recreational and commercial coaches — so your trips stay on schedule and on budget.</p>
+            <div class="svc-perks">
+              <div class="svc-perk">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                MTA Assured Certified
+              </div>
+              <div class="svc-perk">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                Manufacturer Spec Servicing
+              </div>
+              <div class="svc-perk">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 8h2a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V10a2 2 0 012-2h2"/><path d="M8 8V6a4 4 0 018 0v2"/></svg>
+                Caltex Oils &amp; Lubricants
+              </div>
+              <div class="svc-perk">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 3h15v13H1zM16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                Workshop &amp; Mobile Service
+              </div>
+            </div>
+          </div>
+          <div class="svc-list-panel">
+            <h3>What Our Motorhome Servicing Includes</h3>
+            <p>Specialist mechanical servicing for large recreational and commercial coaches:</p>
+            <ul>
+              <li>Diesel Drivetrain Servicing</li>
+              <li>Chassis &amp; Suspension</li>
+              <li>Brake System Overhaul</li>
+              <li>Pre-Trip Safety Inspections</li>
+              <li>WOF / COF Compliance</li>
+              <li>Servicing to Manufacturer Specifications</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ VEHICLES ══════════════ -->
+    <section class="svc-section svc-section--alt">
+      <div class="container">
+        <div class="svc-grid">
+          <div class="svc-body">
+            <div class="section-tag">Vehicles We Service</div>
+            <h2 class="section-title">Which Motorhomes &amp; Coaches<br><em>Do We Service?</em></h2>
+            <p>Our workshop services petrol and diesel vehicles of all makes, with a specialism in large diesel drivetrains. We routinely service and maintain:</p>
+            <p><strong>Motorhomes and camper vans</strong> — keeping private adventures and rental fleets safe and reliable for the open road; <strong>buses and coaches</strong> — with specialist understanding of large diesel drivetrains, chassis and braking systems; and <strong>commercial and fleet vehicles</strong> — helping operators stick to scheduled maintenance programmes with minimal downtime.</p>
+            <p>Whether your coach needs a full brake system overhaul or a pre-trip safety inspection before your next journey, our motorhome servicing in Silverdale is designed to keep you moving.</p>
+          </div>
+          <div class="svc-list-panel">
+            <h3>Motorhomes &amp; Coaches We Maintain</h3>
+            <ul>
+              <li>Motorhomes &amp; Camper Vans</li>
+              <li>Buses &amp; Coaches</li>
+              <li>Large Diesel Drivetrains</li>
+              <li>Chassis &amp; Suspension Systems</li>
+              <li>Cars &amp; Trucks (Petrol &amp; Diesel)</li>
+              <li>Fleet Vehicles</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ WHY US ══════════════ -->
+    <section class="svc-section">
+      <div class="container">
+        <div class="section-header center">
+          <div class="section-tag">Why Choose Us</div>
+          <h2 class="section-title">Why Motorhome Owners<br><em>Choose Silverdale Mechanical</em></h2>
+          <p class="section-sub">For over 45 years we have built our reputation on doing the job right — keeping Auckland's motorhomes and coaches safe, compliant and ready for the road.</p>
+        </div>
+        <div class="svc-perks" style="grid-template-columns: repeat(2, 1fr);">
+          <div class="svc-perk">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+            45+ Years Experience
+          </div>
+          <div class="svc-perk">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            MTA Assured Certified
+          </div>
+          <div class="svc-perk">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Minimal Downtime
+          </div>
+          <div class="svc-perk">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Booked via AutoHive
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════ BOOKING CTA ══════════════ -->
+  <section class="svc-cta">
+    <div class="container">
+      <div class="section-tag">Book a Motorhome Service</div>
+      <h2 class="section-title">Book Your Motorhome or Coach<br>Servicing Today</h2>
+      <p class="svc-cta-sub">Get a free, no-obligation quote from Auckland's trusted motorhome and coach specialists. Book online in under two minutes, or call our Silverdale workshop directly.</p>
+      <div class="svc-cta-actions">
+        <a href="../index.html#booking" class="btn-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Book a Free Quote
+        </a>
+        <a href="tel:094268194" class="btn-directions">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.79 12 19.79 19.79 0 01.72 3.38 2 2 0 012.7 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.64a16 16 0 006.29 6.29l1.42-1.42a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          Call (09) 426 8194
+        </a>
+      </div>
+      <p class="svc-cta-note">Workshop: 14 Anvil Road, Silverdale, Auckland 0932 &nbsp;·&nbsp; <a href="mailto:admin@silverdalemechanical.com">admin@silverdalemechanical.com</a></p>
+    </div>
+  </section>
+
+  <!-- ══════════════ FOOTER ══════════════ -->
+  <footer class="site-footer">
+    <div class="footer-bg" style="background-image:url('../images/bg-services-dark.jpg')"></div>
+    <div class="footer-overlay"></div>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img src="../images/logo-silverdale-mechanical.png" alt="Silverdale Mechanical" class="site-logo site-logo--footer" width="564" height="480" loading="lazy" />
+        </div>
+        <p>Auckland's trusted mechanical specialists. Over 45 years of engineering excellence.</p>
+        <a href="../index.html#booking" class="btn-primary">Book a Free Quote</a>
+      </div>
+      <div class="footer-links">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="../services/diesel-servicing.html">Diesel Servicing</a></li>
+          <li><a href="../services/engine-rebuilds.html">Engine Rebuilds</a></li>
+          <li><a href="../services/cof-wof-checks.html">COF &amp; WOF Checks</a></li>
+          <li><a href="../services/mobile-onsite-service.html">Mobile On-Site</a></li>
+          <li><a href="../services/hydraulic-systems.html">Hydraulic Systems</a></li>
+          <li><a href="../index.html#services">Plant &amp; Machinery</a></li>
+          <li><a href="../index.html#services">Motorhome Servicing</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="../index.html#about">About Us</a></li>
+          <li><a href="../index.html#vehicles">Vehicles We Service</a></li>
+          <li><a href="../index.html#why-us">Why Choose Us</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+          <li><a href="../index.html#booking">Free Quote</a></li>
+          <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="../terms-of-use.html">Terms of Use</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p><a href="tel:094268194">(09) 426 8194</a></p>
+        <p><a href="mailto:admin@silverdalemechanical.com">admin@silverdalemechanical.com</a></p>
+        <p>14 Anvil Road, Silverdale, Auckland 0932</p>
+        <div class="footer-partners">
+          <span>MTA</span><span>Kobelco</span><span>Attach2</span><span>Caltex</span>
+        </div>
+      </div>
+    </div>
+    <a href="#" class="back-to-top" aria-label="Back to top">
+      <span class="btt-circle">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+      </span>
+      <span class="btt-label">Back to Top</span>
+    </a>
+    <div class="footer-bar">
+      <div class="container footer-bar-inner">
+        <p>© 2025 Silverdale Mechanical Engineering. All rights reserved.</p>
+        <p><a href="../privacy-policy.html" style="color:inherit;">Privacy Policy</a> &nbsp;·&nbsp; <a href="../terms-of-use.html" style="color:inherit;">Terms of Use</a> &nbsp;·&nbsp; Powered by <a href="https://autohive.co.nz/" style="color:inherit;" target="_blank" rel="noopener noreferrer"><strong>autohive</strong></a></p>
+      </div>
+    </div>
+    <div class="footer-attribution">
+      <p>Built by <a href="https://adaptagency.com.au" target="_blank" rel="noopener noreferrer">Adapt Agency</a></p>
+    </div>
+  </footer>
+
+  <script>
+    // Navbar scroll effect + mobile menu (same behaviour as main.js on the home page)
+    const navbar = document.getElementById('navbar');
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
+    });
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      mobileMenu.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

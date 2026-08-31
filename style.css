@@ -768,6 +768,14 @@ iframe { display: block; }
   font-size: 0.72rem;
   top: 1px;
 }
+.sc-more {
+  display: inline-block;
+  margin-top: 12px;
+  color: #0072BB;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 2px solid #0072BB;
+}
 
 /* ═══════════════════════════════════════════ VEHICLES ═════════ */
 .vehicles-section { padding: clamp(4rem,8vw,8rem) 0; background: var(--dark3); }
