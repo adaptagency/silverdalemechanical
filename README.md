@@ -26,7 +26,8 @@ Silverdale Mechanical Engineering is a full-service mechanical workshop in Silve
 - [x] Client review + approval → merge to `main` + production deploy (live)
 - [x] Google Search Console: property verified (HTML file method) + sitemap submitted — 9 Sep 2026
 - [x] GSC meta token replaced with real token (`google6cee01378f69f469`) — 9 Sep 2026
-- [x] 7 suburb SEO landing pages for the Hibiscus Coast catchment (Orewa, Millwater, Whangaparaoa, Red Beach, Dairy Flat, Milldale, Hibiscus Coast) under `areas/`
+- [x] 8 area SEO landing pages under `areas/` (Orewa, Millwater, Whangaparaoa, Red Beach, Dairy Flat, Milldale, Hibiscus Coast, Silverdale) — "Mechanic in <area>" targeting
+- [x] "Service Areas" dropdown submenu (desktop) + area links in mobile menu, area names linked in home copy (9 Sep 2026)
 - [ ] Analytics (e.g. Plausible/Fathom) — nothing running yet
 - [ ] Refactor header/footer to common, responsive shared partial (Steve note, 31 Aug 2026)
 
@@ -34,7 +35,7 @@ Silverdale Mechanical Engineering is a full-service mechanical workshop in Silve
 
 | Date | Change |
 |---|---|
-| 9 Sep 2026 | 7 suburb SEO landing pages live under `areas/` (Orewa, Millwater, Whangaparaoa, Red Beach, Dairy Flat, Milldale, Hibiscus Coast) — 'Mechanic in <area>' targeting; sitemap + llms.txt updated with new URLs |
+| 9 Sep 2026 | 8 area SEO landing pages live under `areas/` (Orewa, Millwater, Whangaparaoa, Red Beach, Dairy Flat, Milldale, Hibiscus Coast, Silverdale) + "Service Areas" dropdown submenu in nav + mobile menu; area names linked in home/services copy; sitemap + llms.txt updated |
 | 9 Sep 2026 | Areas-serve targeting live: home + services landing + mobile on-site + sweep now name Orewa, Millwater, Milldale, Red Beach, Whangaparaoa, Dairy Flat + wider Hibiscus Coast/North Auckland (JSON-LD `areaServed` expanded, new "Areas We Serve" home section, llms.txt service-areas line). Deployed to production |
 | 9 Sep 2026 | Google Search Console property verified + sitemap submitted. GSC verification file added (`google6cee01378f69f469.html`) |
 | 9 Sep 2026 | Client reviewed and approved; merged to `main`, production live. README status updated from staging-pending to live. `PROJECT.md` at project root removed (duplicated this README) |
@@ -64,7 +65,7 @@ Silverdale Mechanical Engineering is a full-service mechanical workshop in Silve
 ├── style.css           # Stylesheet with responsive breakpoints
 ├── main.js             # Vanilla JS — animations, counters, forms, nav
 ├── services/           # 8 SEO service pages + services/index.html
-├── areas/              # 7 suburb SEO landing pages (Orewa, Millwater, Whangaparaoa, Red Beach, Dairy Flat, Milldale, Hibiscus Coast)
+├── areas/              # 8 area SEO landing pages (Orewa, Millwater, Whangaparaoa, Red Beach, Dairy Flat, Milldale, Hibiscus Coast, Silverdale)
 ├── sitemap.xml         # XML sitemap
 ├── robots.txt          # Robots + Sitemap reference
 ├── llms.txt            # AI-search visibility file
