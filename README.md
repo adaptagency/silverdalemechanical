@@ -34,6 +34,7 @@ Silverdale Mechanical Engineering is a full-service mechanical workshop in Silve
 
 | Date | Change |
 |---|---|
+| 9 Sep 2026 | Areas-serve targeting live: home + services landing + mobile on-site + sweep now name Orewa, Millwater, Milldale, Red Beach, Whangaparaoa, Dairy Flat + wider Hibiscus Coast/North Auckland (JSON-LD `areaServed` expanded, new "Areas We Serve" home section, llms.txt service-areas line). Deployed to production |
 | 9 Sep 2026 | Google Search Console property verified + sitemap submitted. GSC verification file added (`google6cee01378f69f469.html`) |
 | 9 Sep 2026 | Client reviewed and approved; merged to `main`, production live. README status updated from staging-pending to live. `PROJECT.md` at project root removed (duplicated this README) |
 | 31 Aug 2026 | Built 8 service pages + services landing; wired home/service cards "More details"; made all footers consistent (8 links incl. Pre-Purchase); added SEO foundation (AutoRepair JSON-LD with real reviews, sitemap, robots, llms.txt, GSC placeholder) + full responsive pass; refreshed README to live build |
