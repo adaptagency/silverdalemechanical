@@ -4,14 +4,13 @@ Live website for **Silverdale Mechanical Engineering**, Auckland's trusted mecha
 
 ## Overview
 
-Silverdale Mechanical Engineering is a full-service mechanical workshop in Silverdale, Auckland NZ, servicing cars, trucks, motorhomes and heavy machinery (petrol + diesel, all makes). This repo is the static site (pure HTML/CSS/JS, no build tools) served via GitHub Pages at the live domain, with a Cloudflare Pages staging deploy for client review. Recent work: 8 SEO service pages + services landing page, SEO foundation (JSON-LD, sitemap/robots, llms.txt).
+Silverdale Mechanical Engineering is a full-service mechanical workshop in Silverdale, Auckland NZ, servicing cars, trucks, motorhomes and heavy machinery (petrol + diesel, all makes). This repo is the static site (pure HTML/CSS/JS, no build tools) served via GitHub Pages at the live domain. Recent work: 8 SEO service pages + services landing page, SEO foundation (JSON-LD, sitemap/robots, llms.txt), and suburb landing pages for the Hibiscus Coast catchment.
 
 ## Quick Links
 
 | Link | URL |
 |---|---|
 | Production | https://silverdalemechanical.com |
-| Staging | https://silverdalemechanical-staging.pages.dev |
 | Services landing (production) | https://silverdalemechanical.com/services/ |
 | Repo | https://github.com/adaptagency/silverdalemechanical |
 
@@ -34,6 +33,7 @@ Silverdale Mechanical Engineering is a full-service mechanical workshop in Silve
 
 | Date | Change |
 |---|---|
+| 9 Sep 2026 | Staging branch retired (local + remote deleted); README de-staged (single-branch `main` workflow, GitHub Pages auto-deploys) |
 | 9 Sep 2026 | Areas-serve targeting live: home + services landing + mobile on-site + sweep now name Orewa, Millwater, Milldale, Red Beach, Whangaparaoa, Dairy Flat + wider Hibiscus Coast/North Auckland (JSON-LD `areaServed` expanded, new "Areas We Serve" home section, llms.txt service-areas line). Deployed to production |
 | 9 Sep 2026 | Google Search Console property verified + sitemap submitted. GSC verification file added (`google6cee01378f69f469.html`) |
 | 9 Sep 2026 | Client reviewed and approved; merged to `main`, production live. README status updated from staging-pending to live. `PROJECT.md` at project root removed (duplicated this README) |
@@ -53,7 +53,6 @@ Silverdale Mechanical Engineering is a full-service mechanical workshop in Silve
 | Service | Purpose |
 |---|---|
 | GitHub Pages | Production hosting (custom domain) |
-| Cloudflare Pages | Staging hosting |
 | Web3Forms | Booking form submission (front-end, no backend) |
 | GitHub | Source control |
 
@@ -74,15 +73,7 @@ Silverdale Mechanical Engineering is a full-service mechanical workshop in Silve
 
 ## Deployment
 
-**Staging:**
-```bash
-# from repo root (exclude .venv/.git — build a clean dist bundle)
-cp index.html style.css main.js favicon.svg privacy-policy.html terms-of-use.html sitemap.xml robots.txt llms.txt /tmp/sme-dist/
-cp -r services images /tmp/sme-dist/
-npx wrangler pages deploy /tmp/sme-dist --project-name=silverdalemechanical-staging --branch=staging
-```
-
-**Production:** merge `staging` → `main`; GitHub Pages serves `silverdalemechanical.com`.
+**Production:** push to `main`; GitHub Pages builds and serves `silverdalemechanical.com` automatically.
 
 ## Contacts
 
@@ -95,13 +86,11 @@ npx wrangler pages deploy /tmp/sme-dist --project-name=silverdalemechanical-stag
 
 - Web3Forms access key: in `main.js` (front-end submit)
 - Google Search Console: verified — HTML file `google6cee01378f69f469.html` + meta token `google6cee01378f69f469` in index.html
-- Cloudflare Pages: account API token via wrangler auth
 
 ## Known Issues
 
 - `privacy-policy.html` + `terms-of-use.html` still use the older 7-link anchor footer (not yet aligned to the 8-link consistent footer; to be done with the shared-partial refactor)
 - `.venv/` (python/playwright, ~156M) is untracked in the repo — deploys must exclude it
-- Staging preview URLs are per-deployment hashes; share the current deployment URL, not a fixed one
 - Home phone in README/docs historically stale: live + verified is `(09) 426 8194` (not 4181)
 
 ## Testing
