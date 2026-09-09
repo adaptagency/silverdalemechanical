@@ -26,7 +26,7 @@ Silverdale Mechanical Engineering is a full-service mechanical workshop in Silve
 - [x] Responsive QA (10 pages × 3 viewports — no horizontal scroll)
 - [x] Client review + approval → merge to `main` + production deploy (live)
 - [x] Google Search Console: property verified (HTML file method) + sitemap submitted — 9 Sep 2026
-- [ ] Replace the now-redundant `PLACEHOLDER_GSC_TOKEN` meta tag in index.html (verification already done via HTML file) — optional cleanup
+- [x] GSC meta token replaced with real token (`google6cee01378f69f469`) — 9 Sep 2026
 - [ ] Analytics (e.g. Plausible/Fathom) — nothing running yet
 - [ ] Refactor header/footer to common, responsive shared partial (Steve note, 31 Aug 2026)
 
@@ -94,7 +94,7 @@ npx wrangler pages deploy /tmp/sme-dist --project-name=silverdalemechanical-stag
 ## Config & Secrets
 
 - Web3Forms access key: in `main.js` (front-end submit)
-- Google Search Console: replace `PLACEHOLDER_GSC_TOKEN` in index.html with the real verification token
+- Google Search Console: verified — HTML file `google6cee01378f69f469.html` + meta token `google6cee01378f69f469` in index.html
 - Cloudflare Pages: account API token via wrangler auth
 
 ## Known Issues
