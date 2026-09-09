@@ -17,14 +17,14 @@ Silverdale Mechanical Engineering is a full-service mechanical workshop in Silve
 
 ## Status
 
-**🧪 Staging** — 8 service pages + SEO foundation built on `staging`; pending client review before merge to `main`/production.
+**✅ Live (production)** — 8 service pages + SEO foundation merged to `main` and deployed to `silverdalemechanical.com`; client reviewed and approved.
 
 ## Active Tasks
 
 - [x] 8 service pages (diesel, engine rebuilds, COF/WOF, mobile on-site, hydraulics, plant/machinery, motorhome/coach, pre-purchase) + `services/index.html`
 - [x] SEO foundation: JSON-LD `AutoRepair` (4.7/100 aggregate + 4 real reviews), `sitemap.xml`, `robots.txt`, `llms.txt`
 - [x] Responsive QA (10 pages × 3 viewports — no horizontal scroll)
-- [ ] Client review of staging → then merge `staging` → `main` + deploy production
+- [x] Client review + approval → merge to `main` + production deploy (live)
 - [ ] Replace `PLACEHOLDER_GSC_TOKEN` in index.html with the real Google Search Console token, verify, submit sitemap
 - [ ] Analytics (e.g. Plausible/Fathom) — nothing running yet
 - [ ] Refactor header/footer to common, responsive shared partial (Steve note, 31 Aug 2026)
@@ -33,6 +33,7 @@ Silverdale Mechanical Engineering is a full-service mechanical workshop in Silve
 
 | Date | Change |
 |---|---|
+| 9 Sep 2026 | Client reviewed and approved; merged to `main`, production live. README status updated from staging-pending to live. `PROJECT.md` at project root removed (duplicated this README) |
 | 31 Aug 2026 | Built 8 service pages + services landing; wired home/service cards "More details"; made all footers consistent (8 links incl. Pre-Purchase); added SEO foundation (AutoRepair JSON-LD with real reviews, sitemap, robots, llms.txt, GSC placeholder) + full responsive pass; refreshed README to live build |
 | 29 Aug 2026 | README corrected: live design is light blue/white (#0072BB), not the stale crimson/near-black |
 
@@ -102,6 +103,6 @@ npx wrangler pages deploy /tmp/sme-dist --project-name=silverdalemechanical-stag
 
 ## Testing
 
-**Status:** ✅ Responsive QA passed — 10 pages × 3 viewports (desktop/tablet/mobile), zero horizontal scroll. SEO/JSON-LD validated. Awaiting client sign-off before production merge.
+**Status:** ✅ Responsive QA passed — 10 pages × 3 viewports (desktop/tablet/mobile), zero horizontal scroll. SEO/JSON-LD validated. Client reviewed and approved; production live.
 
 Manual client review checklist: Services nav scrolls to section; each card "More details" → its page; services landing shows 8 visible "More details"; footers consistent (8 links); booking forms work; JSON-LD passes Rich Results validation once production; GSC token replaced.
