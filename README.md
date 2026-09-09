@@ -25,7 +25,8 @@ Silverdale Mechanical Engineering is a full-service mechanical workshop in Silve
 - [x] SEO foundation: JSON-LD `AutoRepair` (4.7/100 aggregate + 4 real reviews), `sitemap.xml`, `robots.txt`, `llms.txt`
 - [x] Responsive QA (10 pages × 3 viewports — no horizontal scroll)
 - [x] Client review + approval → merge to `main` + production deploy (live)
-- [ ] Replace `PLACEHOLDER_GSC_TOKEN` in index.html with the real Google Search Console token, verify, submit sitemap
+- [x] Google Search Console: property verified (HTML file method) + sitemap submitted — 9 Sep 2026
+- [ ] Replace the now-redundant `PLACEHOLDER_GSC_TOKEN` meta tag in index.html (verification already done via HTML file) — optional cleanup
 - [ ] Analytics (e.g. Plausible/Fathom) — nothing running yet
 - [ ] Refactor header/footer to common, responsive shared partial (Steve note, 31 Aug 2026)
 
@@ -33,6 +34,7 @@ Silverdale Mechanical Engineering is a full-service mechanical workshop in Silve
 
 | Date | Change |
 |---|---|
+| 9 Sep 2026 | Google Search Console property verified + sitemap submitted. GSC verification file added (`google6cee01378f69f469.html`) |
 | 9 Sep 2026 | Client reviewed and approved; merged to `main`, production live. README status updated from staging-pending to live. `PROJECT.md` at project root removed (duplicated this README) |
 | 31 Aug 2026 | Built 8 service pages + services landing; wired home/service cards "More details"; made all footers consistent (8 links incl. Pre-Purchase); added SEO foundation (AutoRepair JSON-LD with real reviews, sitemap, robots, llms.txt, GSC placeholder) + full responsive pass; refreshed README to live build |
 | 29 Aug 2026 | README corrected: live design is light blue/white (#0072BB), not the stale crimson/near-black |
