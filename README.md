@@ -23,6 +23,7 @@ Silverdale Mechanical Engineering is a full-service mechanical workshop in Silve
 - [x] 8 service pages (diesel, engine rebuilds, COF/WOF, mobile on-site, hydraulics, plant/machinery, motorhome/coach, pre-purchase) + `services/index.html`
 - [x] SEO foundation: JSON-LD `AutoRepair` (4.7/100 aggregate + 4 real reviews), `sitemap.xml`, `robots.txt`, `llms.txt`
 - [x] Responsive QA (10 pages × 3 viewports — no horizontal scroll)
+- [x] **Responsive tap-target pass (10 Sep 2026)** — mobile nav hamburger + phone link enlarged from 18–36px to 44×44px hit areas; full grid re-verified live, zero overflow
 - [x] Client review + approval → merge to `main` + production deploy (live)
 - [x] Google Search Console: property verified (HTML file method) + sitemap submitted — 9 Sep 2026
 - [x] GSC meta token replaced with real token (`google6cee01378f69f469`) — 9 Sep 2026
@@ -35,6 +36,7 @@ Silverdale Mechanical Engineering is a full-service mechanical workshop in Silve
 
 | Date | Change |
 |---|---|
+| 10 Sep 2026 | Responsive tap-target fix — mobile nav hamburger toggle (was 36×28) and phone link (was 18×18 icon-only) both enlarged to 44×44px hit areas; deployed as `ea187a4`; verified live. Full viewport grid (7 pages × 1280/768/375) re-passed with zero horizontal overflow |
 | 9 Sep 2026 | 8 area SEO landing pages live under `areas/` (Orewa, Millwater, Whangaparaoa, Red Beach, Dairy Flat, Milldale, Hibiscus Coast, Silverdale) + "Service Areas" dropdown submenu in nav + mobile menu; area names linked in home/services copy; sitemap + llms.txt updated |
 | 9 Sep 2026 | Areas-serve targeting live: home + services landing + mobile on-site + sweep now name Orewa, Millwater, Milldale, Red Beach, Whangaparaoa, Dairy Flat + wider Hibiscus Coast/North Auckland (JSON-LD `areaServed` expanded, new "Areas We Serve" home section, llms.txt service-areas line). Deployed to production |
 | 9 Sep 2026 | Google Search Console property verified + sitemap submitted. GSC verification file added (`google6cee01378f69f469.html`) |
