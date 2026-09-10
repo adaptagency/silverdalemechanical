@@ -29,7 +29,7 @@ Silverdale Mechanical Engineering is a full-service mechanical workshop in Silve
 - [x] GSC meta token replaced with real token (`google6cee01378f69f469`) — 9 Sep 2026
 - [x] 8 area SEO landing pages under `areas/` (Orewa, Millwater, Whangaparaoa, Red Beach, Dairy Flat, Milldale, Hibiscus Coast, Silverdale) — "Mechanic in <area>" targeting
 - [x] "Service Areas" dropdown submenu (desktop) + area links in mobile menu, area names linked in home copy (9 Sep 2026)
-- [x] **Analytics (10 Sep 2026)** — Cloudflare Web Analytics live on all 20 public pages (beacon in `<head>`); cookieless, no consent banner; weekly Friday snapshot report auto-delivered (cron `8136fc9445f7`). Deployed `2e9efbf`
+- [x] **Analytics (10 Sep 2026)** — Cloudflare Web Analytics live on all 20 public pages (beacon in `<head>`); cookieless, no consent banner; **daily 5am Auckland (= midnight VN) WhatsApp PDF report to Damien Harris** (+64 27 772 6956), cron `8136fc9445f7`. Deployed `2e9efbf`
 - [ ] Refactor header/footer to common, responsive shared partial (Steve note, 31 Aug 2026)
 
 ## Recent Changes
