@@ -36,7 +36,8 @@ Silverdale Mechanical Engineering is a full-service mechanical workshop in Silve
 
 | Date | Change |
 |---|---|
-| 10 Sep 2026 | **Cloudflare Web Analytics installed** — beacon added to all 20 public pages (skipped GSC verification stub); cookieless, no GDPR consent needed; dashboard shareable with the client. Commit `2e9efbf` |
+| 10 Sep 2026 | **Analytics productionised** — daily Website Visits Snapshot PDF (CF Web Analytics, trailing 7-day window, top-pages table, "Page n of nn" pagination, Hal signature) auto-delivered to **Damien Harris** via WhatsApp at **5am Auckland (midnight VN)**, cron `8136fc9445f7`. Format reviewed & approved |
+| 10 Sep 2026 | **Cloudflare Web Analytics installed** — beacon added to all 20 public pages (skipped GSC verification stub); cookieless, no GDPR consent needed. Commit `2e9efbf` |
 | 10 Sep 2026 | Responsive tap-target fix — mobile nav hamburger toggle (was 36×28) and phone link (was 18×18 icon-only) both enlarged to 44×44px hit areas; deployed as `ea187a4`; verified live. Full viewport grid (7 pages × 1280/768/375) re-passed with zero horizontal overflow |
 | 9 Sep 2026 | 8 area SEO landing pages live under `areas/` (Orewa, Millwater, Whangaparaoa, Red Beach, Dairy Flat, Milldale, Hibiscus Coast, Silverdale) + "Service Areas" dropdown submenu in nav + mobile menu; area names linked in home/services copy; sitemap + llms.txt updated |
 | 9 Sep 2026 | Areas-serve targeting live: home + services landing + mobile on-site + sweep now name Orewa, Millwater, Milldale, Red Beach, Whangaparaoa, Dairy Flat + wider Hibiscus Coast/North Auckland (JSON-LD `areaServed` expanded, new "Areas We Serve" home section, llms.txt service-areas line). Deployed to production |
