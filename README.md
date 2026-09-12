@@ -35,7 +35,8 @@ Silverdale Mechanical Engineering is a full-service mechanical workshop in Silve
 ## Recent Changes
 
 | Date | Change |
-|---|---|
+|------|--------|
+| 12 Sep 2026 | **Report heading now includes day of week** (e.g. "Website Visits Snapshot (Saturday)") — applies to the daily WhatsApp PDF to Damien, the docs/ archive, and Obsidian copy. **GSC/GBP ownership split confirmed with client:** Search Console property owned by Adapt (sitemap verified + processed, 20/20 URLs live, homepage confirmed indexed — other pages crawling; new-domain indexing takes days–weeks, "check back" message is normal); Google Business Profile owned by client (existing listing, reviews, NAP consistent: 14 Anvil Road, (09) 426 8194) — Maps side is client-managed, site JSON-LD kept in sync with their listing |
 | 10 Sep 2026 | **Analytics productionised** — daily Website Visits Snapshot PDF (CF Web Analytics, trailing 7-day window, top-pages table, "Page n of nn" pagination, Hal signature) auto-delivered to **Damien Harris** via WhatsApp at **5am Auckland (midnight VN)**, cron `8136fc9445f7`. Format reviewed & approved |
 | 10 Sep 2026 | **Cloudflare Web Analytics installed** — beacon added to all 20 public pages (skipped GSC verification stub); cookieless, no GDPR consent needed. Commit `2e9efbf` |
 | 10 Sep 2026 | Responsive tap-target fix — mobile nav hamburger toggle (was 36×28) and phone link (was 18×18 icon-only) both enlarged to 44×44px hit areas; deployed as `ea187a4`; verified live. Full viewport grid (7 pages × 1280/768/375) re-passed with zero horizontal overflow |
